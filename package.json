@@ -1,0 +1,20 @@
+{
+  "name": "neeto-icons",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "vinay0x",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build/index.js"
+  },
+  "devDependencies": {
+    "camelcase": "^6.2.0",
+    "cheerio": "^1.0.0-rc.10",
+    "ejs": "^3.1.6",
+    "glob": "^7.1.7",
+    "mkdirp": "^1.0.4",
+    "path": "^0.12.7",
+    "prettier": "^2.3.1",
+    "uppercamelcase": "^3.0.0"
+  }
+}
