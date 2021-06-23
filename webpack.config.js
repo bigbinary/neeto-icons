@@ -6,6 +6,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "neeto-icons.js",
     library: "neeto_icons",
+    libraryTarget: "umd",
   },
   module: {
     rules: [
