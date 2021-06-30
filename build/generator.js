@@ -117,6 +117,10 @@ module.exports.generateIcons = async ({
           .toString()
           .replace(/<!--[\s\S]*?-->/g, "")
           .replace(new RegExp('stroke="currentColor"', "g"), "stroke={color}")
+          .replace(
+            new RegExp('strokeWidth="1.5"', "g"),
+            "strokeWidth={strokeWidth}"
+          )
           .replace(new RegExp('fill="currentColor"', "g"), "fill={color}")
           .replace('width="24"', "width={size}")
           .replace('height="24"', "height={size}")
@@ -143,15 +147,16 @@ module.exports.generateIcons = async ({
           "utf-8"
         );
       });
-      
-      const iconListString = `export const iconList = ${JSON.stringify(iconList)}`;
+
+      const iconListString = `export const iconList = ${JSON.stringify(
+        iconList
+      )}`;
 
       fs.appendFileSync(
         path.join(destination, "index.js"),
         iconListString,
         "utf-8"
       );
-
     });
   } catch (err) {
     console.log(err);
