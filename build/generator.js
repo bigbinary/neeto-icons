@@ -44,7 +44,7 @@ module.exports.generateIcons = async ({
         const svg = fs.readFileSync(iconPath, "utf-8");
         const iconName = path.basename(iconPath, path.extname(iconPath));
         iconList.push(iconName);
-        const componentName = uppercamelcase(iconName) + "Icon";
+        const componentName = uppercamelcase(iconName);
 
         const $ = cheerio.load(svg, { xmlMode: true });
 
@@ -144,15 +144,13 @@ module.exports.generateIcons = async ({
         );
       });
       
-      fs.writeFileSync(path.join(destination, "iconList.js"), `export const iconList = ${JSON.stringify(iconList)}`, "utf8");
+      const iconListString = `export const iconList = ${JSON.stringify(iconList)}`;
 
-      const exportIconList = `export * from "./iconList.js";\r\n`;
-
-        fs.appendFileSync(
-          path.join(destination, "index.js"),
-          exportIconList,
-          "utf-8"
-        );
+      fs.appendFileSync(
+        path.join(destination, "index.js"),
+        iconListString,
+        "utf-8"
+      );
 
     });
   } catch (err) {
