@@ -1,10 +1,13 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./lib/index.js",
+  entry: {
+    ["neeto-icons"]: "./lib/index.js",
+    iconList: "./lib/iconList.json",
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "neeto-icons.js",
+    filename: "[name].js",
     library: "neeto_icons",
     libraryTarget: "umd",
   },
