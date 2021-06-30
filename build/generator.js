@@ -39,10 +39,11 @@ module.exports.generateIcons = async ({
       }
 
       const ejsTemplate = fs.readFileSync(template, "utf8");
-      console.log(icons);
+      let iconList = [];
       icons.forEach((iconPath) => {
         const svg = fs.readFileSync(iconPath, "utf-8");
         const iconName = path.basename(iconPath, path.extname(iconPath));
+        iconList.push(iconName);
         const componentName = uppercamelcase(iconName) + "Icon";
 
         const $ = cheerio.load(svg, { xmlMode: true });
@@ -142,6 +143,7 @@ module.exports.generateIcons = async ({
           "utf-8"
         );
       });
+      fs.writeFileSync(path.join(destination, "iconList.json"), JSON.stringify(iconList), "utf8");
     });
   } catch (err) {
     console.log(err);
