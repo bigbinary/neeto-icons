@@ -44,7 +44,7 @@ module.exports.generateIcons = async ({
         const svg = fs.readFileSync(iconPath, "utf-8");
         const iconName = path.basename(iconPath, path.extname(iconPath));
         const componentName = uppercamelcase(iconName);
-        iconList.push(iconName);
+        iconList.push(componentName);
 
         const $ = cheerio.load(svg, { xmlMode: true });
 
