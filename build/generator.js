@@ -143,7 +143,17 @@ module.exports.generateIcons = async ({
           "utf-8"
         );
       });
-      fs.writeFileSync(path.join(destination, "iconList.json"), JSON.stringify(iconList), "utf8");
+      
+      fs.writeFileSync(path.join(destination, "iconList.js"), `export const iconList = ${JSON.stringify(iconList)}`, "utf8");
+
+      const exportIconList = `export * from "./iconList.js";\r\n`;
+
+        fs.appendFileSync(
+          path.join(destination, "index.js"),
+          exportIconList,
+          "utf-8"
+        );
+
     });
   } catch (err) {
     console.log(err);
