@@ -5,7 +5,8 @@
   "author": "vinay0x",
   "license": "MIT",
   "scripts": {
-    "start": "TAILWIND_ENV=development NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.js",
+    "start": "NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.js",
+    "build-preview": "NODE_ENV=production webpack --mode production --config webpack.dev.config.js",
     "generate": "node build/index.js",
     "webpack-compile": "NODE_ENV=production webpack --mode production",
     "build": "yarn generate && yarn webpack-compile"

@@ -58,7 +58,8 @@ module.exports = {
     ],
   },
   output: {
-    path: __dirname + "/dist",
+    path: __dirname + "/preview_dist",
+    filename: "bundle.js",
     publicPath: "/",
   },
   devServer: {
