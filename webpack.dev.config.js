@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./preview/src/index.js",
+  entry: "./example/src/index.js",
   devtool: "eval-cheap-source-map",
   module: {
     rules: [
@@ -13,7 +13,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        include: [path.resolve(__dirname, "preview")],
+        include: [path.resolve(__dirname, "example")],
         use: [
           {
             loader: "babel-loader",
@@ -58,7 +58,7 @@ module.exports = {
     ],
   },
   output: {
-    path: __dirname + "/preview_dist",
+    path: __dirname + "/preview",
     filename: "bundle.js",
     publicPath: "/",
   },
@@ -67,7 +67,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./preview/index.html",
+      template: "./example/index.html",
       filename: "./index.html",
     }),
   ],
