@@ -20,6 +20,7 @@ jobs:
         with:
           branch: master
           message: 'New version release'
+          push: origin master --force
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
