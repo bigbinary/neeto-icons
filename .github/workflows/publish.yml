@@ -1,23 +1,29 @@
 name: "Publish npm package"
 on:
-  push:
+  pull_request:
     branches:
       - master
+    types: [closed]
 jobs:
   publish:
     name: "Publish"
     runs-on: macos-latest
-    if: "!contains(github.event.pull_request.labels.*.name, 'skip-ci')"
+    if: ${{ github.event.pull_request.merged == true && !contains(github.event.pull_request.labels.*.name, 'skip-ci') }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.2.0
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: 'Automated Version Bump'
-        id: version-bump
-        uses: 'phips28/gh-action-bump-version@master'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Bump version
+        run: yarn version --patch --no-git-tag-version
+      - uses: EndBug/add-and-commit@v7
+        with:
+          branch: master
+          message: 'New version release'
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - run: yarn install
       - name: "Publish"
         uses: JS-DevTools/npm-publish@v1
