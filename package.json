@@ -8,13 +8,21 @@
     "start": "NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.js",
     "build-preview": "NODE_ENV=production webpack --mode production --config webpack.dev.config.js",
     "generate": "node build/index.js",
-    "webpack-compile": "NODE_ENV=production webpack --mode production",
-    "build": "yarn generate && yarn webpack-compile"
+    "rollup-compile": "NODE_ENV=production rollup -c --mode production",
+    "build": "yarn generate && yarn rollup-compile"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
+    "rollup": "2.62.0",
+    "@rollup/plugin-node-resolve": "13.1.2",
+    "@rollup/plugin-commonjs": "21.0.1",
+    "rollup-plugin-analyzer": "4.0.0",
+    "rollup-plugin-cleaner": "1.0.0",
+    "rollup-plugin-license": "2.6.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-babel": "4.4.0",
     "babel-loader": "^8.2.2",
     "camelcase": "^6.2.0",
     "cheerio": "^1.0.0-rc.10",
@@ -40,5 +48,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "repository": "https://github.com/bigbinary/neeto-icons.git"
+  "repository": "https://github.com/bigbinary/neeto-icons.git",
+  "sideEffects": false
 }
