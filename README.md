@@ -37,5 +37,5 @@ Anywhere in your React file
 ### Build process
 
 - Running `yarn build` will invoke the `yarn generate` script first, which will generate React components from `.svg` files.
-- Once `yarn generate` is done, it'll invoke `yarn webpack-compile` which uses `lib/index.js` as the entry point to create a bundle (`dist/neeto-icons.js`).
+- Once `yarn generate` is done, it'll invoke `yarn rollup-compile` which uses `lib/index.js` as the entry point to create a bundle (`dist/neeto-icons.js`).
 - We use the generated bundle as the `main` file in `package.json` for using it as a package.
