@@ -1,5 +1,7 @@
 # neetoIcons
 
+The neetoIcons library is a collection of SVG React component icons that drives the experience in the neeto products built at BigBinary.
+
 ### Installation
 
 ```
