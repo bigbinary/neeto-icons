@@ -6,7 +6,7 @@ on:
     types: [closed]
 jobs:
   publish:
-    name: "Publish"
+    name: "Publish Package"
     runs-on: macos-latest
     if: ${{ github.event.pull_request.merged == true && !contains(github.event.pull_request.labels.*.name, 'skip-ci') }}
     steps:
