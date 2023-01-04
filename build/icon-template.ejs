@@ -2,12 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function <%= componentName %> (props) {
-  const { size, color, strokeWidth, ...other } = props
-  return (
-    <%- svg %>
-  )
-};
+export const <%= componentName %> = ({ size, color, strokeWidth, ...other }) => (
+  <%- svg %>
+);
 
 
 <%=componentName%>.defaultProps = {

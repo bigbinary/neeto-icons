@@ -2,7 +2,7 @@ const camelcase = require("camelcase");
 const { generateIcons } = require("./generator");
 
 generateIcons({
-  template: "./build/template.ejs",
+  template: "./build/icon-template.ejs",
   destination: "./lib/icons",
   source: "./source/icons/**.svg",
   performExtraAttributeOperations: (attribute, element) => {
@@ -19,7 +19,7 @@ generateIcons({
 });
 
 generateIcons({
-  template: "./build/template.ejs",
+  template: "./build/logo-template.ejs",
   destination: "./lib/logos",
   source: "./source/logos/**.svg",
 });
