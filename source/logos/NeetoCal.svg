@@ -1,0 +1,39 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40 20C40 8.95431 31.0457 0 20 0H0V40H40V20Z" fill="url(#paint0_linear_3204_328)" />
+  <g filter="url(#filter0_d_3204_328)">
+    <rect x="14.1235" y="22.2222" width="2.39859" height="2.39859" rx="0.239859" fill="white" />
+    <rect x="14.1235" y="25.3404" width="2.39859" height="2.39859" rx="0.239859" fill="white" />
+    <rect x="17.2416" y="19.1041" width="2.39859" height="2.39859" rx="0.239859" fill="white" />
+    <rect x="17.2416" y="22.2222" width="2.39859" height="2.39859" rx="0.239859" fill="white" />
+    <rect x="17.2416" y="25.3404" width="2.39859" height="2.39859" rx="0.239859" fill="white" />
+    <rect x="20.3598" y="19.1041" width="2.39859" height="2.39859" rx="0.239859" fill="white" />
+    <rect x="23.478" y="19.1041" width="2.39859" height="2.39859" rx="0.239859" fill="white" />
+    <rect x="20.3598" y="22.2222" width="2.39859" height="2.39859" rx="0.239859" fill="white" />
+    <rect x="20.3598" y="25.3404" width="2.39859" height="2.39859" rx="0.239859" fill="white" />
+    <rect x="23.478" y="22.2222" width="2.39859" height="2.39859" rx="0.239859" fill="white" />
+    <rect x="14.963" y="11.4285" width="1.79894" height="3.35802" rx="0.899471" fill="white" />
+    <rect x="23.2381" y="11.4285" width="1.79894" height="3.35802" rx="0.899471" fill="white" />
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M22.8783 12.868H17.1217V13.8872C17.1217 14.5827 16.5579 15.1465 15.8624 15.1465C15.167 15.1465 14.6032 14.5827 14.6032 13.8872V12.868H13.4039C11.6818 12.868 10.2857 14.264 10.2857 15.9861V28.4588C10.2857 30.1809 11.6818 31.577 13.4039 31.577H26.5961C28.3182 31.577 29.7143 30.1809 29.7143 28.4588V15.9861C29.7143 14.264 28.3182 12.868 26.5961 12.868H25.3968V13.8872C25.3968 14.5827 24.833 15.1465 24.1375 15.1465C23.4421 15.1465 22.8783 14.5827 22.8783 13.8872V12.868ZM13.164 17.6652C12.8991 17.6652 12.6843 17.8799 12.6843 18.1449V28.6987C12.6843 28.9636 12.8991 29.1784 13.164 29.1784H26.836C27.1009 29.1784 27.3157 28.9636 27.3157 28.6987V18.1449C27.3157 17.8799 27.1009 17.6652 26.836 17.6652H13.164Z"
+      fill="white" />
+  </g>
+  <defs>
+    <filter id="filter0_d_3204_328" x="10.2857" y="11.4285" width="21.1429" height="22.1484"
+      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" type="matrix"
+        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+      <feOffset dx="0.857143" dy="1.14286" />
+      <feGaussianBlur stdDeviation="0.428571" />
+      <feComposite in2="hardAlpha" operator="out" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3204_328" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3204_328" result="shape" />
+    </filter>
+    <linearGradient id="paint0_linear_3204_328" x1="40" y1="48.1429" x2="21.1215" y2="4.67289"
+      gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EE4D5F" />
+      <stop offset="1" stop-color="#FFCDA5" />
+    </linearGradient>
+  </defs>
+</svg>
