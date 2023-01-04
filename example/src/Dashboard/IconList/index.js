@@ -2,18 +2,18 @@ import React from "react";
 
 import IconItem from "./IconItem";
 
-import { iconsList } from "../../../../lib/icons";
+import * as icons from "../../../../lib/icons";
 
 export default function IconsList({ searchTerm }) {
-  const filteredIconsList = iconsList.filter((name) =>
+  const filteredIconsList = Object.keys(icons).filter((name) =>
     name.toLowerCase().includes(searchTerm.toLowerCase())
   );
   return filteredIconsList.length === 0 ? (
     <div className="px-8 text-sm text-gray-600">No icons found.</div>
   ) : (
     <div className="grid w-full grid-cols-3 gap-4 px-8 py-4 md:grid-cols-6 lg:grid-cols-10">
-      {filteredIconsList.map((name) => (
-        <IconItem key={name} name={name} />
+      {filteredIconsList.map((key) => (
+        <IconItem key={key} Icon={icons[key]} name={key} />
       ))}
     </div>
   );

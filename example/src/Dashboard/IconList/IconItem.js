@@ -5,9 +5,7 @@ import toast from "react-hot-toast";
 
 import * as Icons from "../../../../lib";
 
-export default function IconItem({ name }) {
-  console.log(Icons);
-  const Icon = Icons[name];
+export default function IconItem({ name, Icon }) {
   const copyName = () => {
     copy(name);
     toast(`${name} has been copied to clipboard.`, {

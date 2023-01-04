@@ -115,16 +115,10 @@ module.exports.generateIcons = async ({
 
         fs.appendFileSync(
           path.join(destination, "index.js"),
-          getExportString(componentName),
+          `export * from "./${componentName}";\r\n`,
           "utf-8"
         );
       });
-
-      fs.appendFileSync(
-        path.join(destination, "index.js"),
-        getListString(iconsList),
-        "utf-8"
-      );
     });
   } catch (err) {
     console.log(err);
