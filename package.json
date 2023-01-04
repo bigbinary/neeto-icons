@@ -4,6 +4,7 @@
   "main": "./dist/neeto-icons.js",
   "author": "vinay0x",
   "license": "MIT",
+  "types": "./index.d.ts",
   "exports": {
     "./logos": {
       "import": "./dist/neeto-logos.js"
