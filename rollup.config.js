@@ -12,7 +12,8 @@ export const extensions = [".js", ".jsx"];
 
 // Compile index & compile separately every elements exported by it.
 const input = Object.fromEntries([
-  ["neeto-icons", "./lib/index.js"],
+  ["neeto-icons", "./lib/icons/index.js"],
+  ["neeto-logos", "./lib/logos/index.js"],
   ...glob.sync("./lib/icons/*").map((componentPath) => {
     const componentName = path.basename(componentPath);
     return [componentName, componentPath];
@@ -22,7 +23,7 @@ const input = Object.fromEntries([
 // Export non index chunks in `esm/_internal` (enables tree shaking but detracts user from importing them directly).
 const renameFile = (info) => {
   let name = info.name;
-  if (name !== "neeto-icons") {
+  if (!["neeto-icons", "neeto-logos"].includes(name)) {
     name = `_internal/${name}`;
   }
   return `${name}.js`;
