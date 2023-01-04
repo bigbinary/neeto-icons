@@ -14,8 +14,6 @@ module.exports.generateIcons = async ({
   destination = "./lib/icons",
   performExtraAttributeOperations = () => {},
   addExtraReplacements = (string) => string,
-  getExportString,
-  getListString,
 }) => {
   try {
     const indexFilePath = path.join(destination, "index.js");
