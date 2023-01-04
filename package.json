@@ -4,6 +4,14 @@
   "main": "./dist/neeto-icons.js",
   "author": "vinay0x",
   "license": "MIT",
+  "exports": {
+    "./logos": {
+      "import": "./dist/neeto-logos.js"
+    },
+    ".": {
+      "import": "./dist/neeto-icons.js"
+    }
+  },
   "scripts": {
     "start": "NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.js",
     "build-preview": "NODE_ENV=production webpack --mode production --config webpack.dev.config.js",
