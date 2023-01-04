@@ -11,7 +11,7 @@ const ejs = require("ejs");
 module.exports.generateIcons = async ({
   template,
   source = "./source/icons/**.svg",
-  destination = "./lib",
+  destination = "./lib/icons",
 }) => {
   try {
     const indexFilePath = path.join(destination, "index.js");
@@ -24,7 +24,7 @@ module.exports.generateIcons = async ({
     fs.writeFileSync(indexFilePath, "", "utf-8");
 
     // make the icon folder
-    await mkdirp(path.join(destination, "icons"));
+    await mkdirp(destination);
 
     // read the icon source
     glob(source, (err, icons) => {
@@ -48,11 +48,7 @@ module.exports.generateIcons = async ({
 
         const $ = cheerio.load(svg, { xmlMode: true });
 
-        const iconDestination = path.join(
-          destination,
-          "icons",
-          componentName + ".js"
-        );
+        const iconDestination = path.join(destination, componentName + ".js");
 
         // normalize the icon. This code is based on code found in react-icons
         // and react-feather.

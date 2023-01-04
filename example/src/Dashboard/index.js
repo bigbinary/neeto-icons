@@ -9,6 +9,8 @@ function Dashboard() {
     <>
       <Toaster position="bottom-center" />
       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <h2 className="px-8 pt-4">Logos</h2>
+      <h2 className="px-8 pt-4">Icons</h2>
       <IconList searchTerm={searchTerm} />
     </>
   );

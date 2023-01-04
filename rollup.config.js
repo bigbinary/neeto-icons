@@ -12,7 +12,7 @@ export const extensions = [".js", ".jsx"];
 
 // Compile index & compile separately every elements exported by it.
 const input = Object.fromEntries([
-  ["neeto-icons", "./lib/index.js"],
+  ["neeto-icons", "./lib/icons/index.js"],
   ...glob.sync("./lib/icons/*").map((componentPath) => {
     const componentName = path.basename(componentPath);
     return [componentName, componentPath];

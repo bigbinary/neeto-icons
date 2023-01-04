@@ -2,7 +2,7 @@ import React from "react";
 
 import IconItem from "./IconItem";
 
-import { iconList } from "../../../../lib";
+import { iconList } from "../../../../lib/icons";
 
 export default function IconList({ searchTerm }) {
   const filteredIconList = iconList.filter((name) =>
