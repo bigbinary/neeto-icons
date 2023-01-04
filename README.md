@@ -11,13 +11,13 @@ yarn add @bigbinary/neeto-icons
 ### Usage
 
 ```javascript
-import { ClockIcon } from "@bigbinary/neeto-icons";
+import { Clock } from "@bigbinary/neeto-icons";
 ```
 
 Anywhere in your React file
 
 ```jsx
-<ClockIcon color="#1e1e20" size={24} />
+<Clock color="#1e1e20" size={24} />
 ```
 
 ### Props
