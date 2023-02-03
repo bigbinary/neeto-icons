@@ -79,7 +79,7 @@ module.exports.generateIcons = async ({
                   (match, cssProperty, cssValue) =>
                     (cssObject[camelcase(cssProperty)] = cssValue)
                 );
-                $(el).attr(attribute, cssObject);
+                $(el).attr(attribute, `{${JSON.stringify(cssObject)}}`);
               }
             }
 
@@ -99,6 +99,7 @@ module.exports.generateIcons = async ({
         let svgString = $("svg")
           .toString()
           .replace(/<!--[\s\S]*?-->/g, "")
+          .replace(/style=\"({.*?})\"/g, (_, p1) => (`style=${p1}`.replace(/&quot;/g, '"')))
           .replace('width="placeholder"', "width={size}")
           .replace('height="placeholder"', "height={size}")
           .replace('other="..."', "{...other}");
