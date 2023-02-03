@@ -6,6 +6,9 @@
   "license": "MIT",
   "types": "./index.d.ts",
   "exports": {
+    "./app-icons": {
+      "import": "./dist/app-icons.js"
+    },
     "./logos": {
       "import": "./dist/neeto-logos.js"
     },

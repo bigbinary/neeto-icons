@@ -23,3 +23,9 @@ generateIcons({
   destination: "./lib/logos",
   source: "./source/logos/**.svg",
 });
+
+generateIcons({
+  template: "./build/app-icon-template.ejs",
+  destination: "./lib/app-icons",
+  source: "./source/appIcons/**.svg",
+});
