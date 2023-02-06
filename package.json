@@ -1,6 +1,6 @@
 {
   "name": "@bigbinary/neeto-icons",
-  "version": "1.9.4",
+  "version": "1.9.5",
   "main": "./dist/neeto-icons.js",
   "author": "vinay0x",
   "license": "MIT",
