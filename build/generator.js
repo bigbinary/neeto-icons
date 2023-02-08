@@ -99,7 +99,9 @@ module.exports.generateIcons = async ({
         let svgString = $("svg")
           .toString()
           .replace(/<!--[\s\S]*?-->/g, "")
-          .replace(/style=\"({.*?})\"/g, (_, p1) => (`style=${p1}`.replace(/&quot;/g, '"')))
+          .replace(/style=\"({.*?})\"/g, (_, p1) =>
+            `style=${p1}`.replace(/&quot;/g, '"')
+          )
           .replace('width="placeholder"', "width={size}")
           .replace('height="placeholder"', "height={size}")
           .replace('other="..."', "{...other}");
@@ -118,6 +120,16 @@ module.exports.generateIcons = async ({
           "utf-8"
         );
       });
+
+      const iconListString = `export const iconList = ${JSON.stringify(
+        iconsList
+      )}`;
+
+      fs.appendFileSync(
+        path.join(destination, "index.js"),
+        iconListString,
+        "utf-8"
+      );
     });
   } catch (err) {
     console.log(err);
