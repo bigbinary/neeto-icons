@@ -120,16 +120,6 @@ module.exports.generateIcons = async ({
           "utf-8"
         );
       });
-
-      const iconListString = `export const iconList = ${JSON.stringify(
-        iconsList
-      )}`;
-
-      fs.appendFileSync(
-        path.join(destination, "index.js"),
-        iconListString,
-        "utf-8"
-      );
     });
   } catch (err) {
     console.log(err);
