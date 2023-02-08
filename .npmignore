@@ -1,4 +1,10 @@
 /build
 /lib
 /source
+/example
 .editorconfig
+.github
+.vscode
+vercel.json
+
+/*.config.js
