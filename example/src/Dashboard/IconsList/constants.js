@@ -1,0 +1,1 @@
+export const DEFAULT_CLASS_NAME = "grid w-full grid-cols-3 gap-4 px-8 py-4 md:grid-cols-6 lg:grid-cols-10"

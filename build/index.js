@@ -29,3 +29,10 @@ generateIcons({
   destination: "./lib/app-icons",
   source: "./source/appIcons/**.svg",
 });
+
+generateIcons({
+  template: "./build/typeface-logo-template.ejs",
+  destination: "./lib/typeface-logos",
+  source: "./source/typefaceLogos/**.svg",
+  addExtraReplacements: (svgString) => svgString.replace("width={size}", "width={width}").replace("height={size}", "height={height}"),
+});
