@@ -28,6 +28,25 @@ Anywhere in your React file
 | size      | string, number | 24           | Value supplied to height and width attributes of SVG element. |
 | className | string         |              | Classes supplied to the SVG element.                          |
 
+### Typeface Logos
+
+```javascript
+import { Neeto } from "@bigbinary/neeto-icons/typeface-logos";
+```
+
+Anywhere in your React file
+
+```jsx
+<Neeto height={24} width={48} />
+```
+
+| Name      | Type           | Default      | Description                                                   |
+| :-------- | :------------- | :----------- | :------------------------------------------------------------ |
+| height      | string, number | 20           | Value supplied to height attribute of SVG element. |
+| width      | string, number | auto           | Value supplied to width attribute of SVG element. |
+| className | string         |              | Classes supplied to the SVG element.                          |
+
+
 ### How it works
 
 - It uses a script (`build/generate.js`) to take all the `.svg` files from the `source` folder and converts them to React components that render the SVG icon.

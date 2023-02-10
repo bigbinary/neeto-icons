@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import * as icons from "../../../lib/icons";
 import * as logos from "../../../lib/logos";
 import * as appIcons from "../../../lib/app-icons";
+import * as typefaceLogos from "../../../lib/typeface-logos";
 
 function Dashboard() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,6 +19,13 @@ function Dashboard() {
       <IconsList searchTerm={searchTerm} icons={logos} listName="logos" />
       <h2 className="px-8 pt-4">App Icons</h2>
       <IconsList searchTerm={searchTerm} icons={appIcons} listName="appIcons" />
+      <h2 className="px-8 pt-4">Typeface Logos</h2>
+      <IconsList
+        searchTerm={searchTerm}
+        icons={typefaceLogos}
+        listName="typefaceLogos"
+        className="grid w-full grid-cols-2 gap-4 px-8 py-4 md:grid-cols-2 lg:grid-cols-4"
+      />
     </>
   );
 }

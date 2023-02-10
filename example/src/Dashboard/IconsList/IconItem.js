@@ -3,8 +3,6 @@ import React from "react";
 import copy from "copy-to-clipboard";
 import toast from "react-hot-toast";
 
-import * as Icons from "../../../../lib";
-
 export default function IconItem({ name, Icon }) {
   const copyName = () => {
     copy(name);

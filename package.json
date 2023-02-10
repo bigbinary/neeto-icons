@@ -6,6 +6,9 @@
   "license": "MIT",
   "types": "./index.d.ts",
   "exports": {
+    "./typeface-logos": {
+      "import": "./dist/typeface-logos.js"
+    },
     "./app-icons": {
       "import": "./dist/app-icons.js"
     },
