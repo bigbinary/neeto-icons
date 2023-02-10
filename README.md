@@ -20,6 +20,18 @@ Anywhere in your React file
 <Clock color="#1e1e20" size={24} />
 ```
 
+### Product logos
+
+```javascript
+import { Neeto } from "@bigbinary/neeto-icons/logos";
+```
+
+### App icons
+
+```javascript
+import { NeetoSocial } from "@bigbinary/neeto-icons/app-icons";
+```
+
 ### Props
 
 | Name      | Type           | Default      | Description                                                   |
@@ -28,7 +40,7 @@ Anywhere in your React file
 | size      | string, number | 24           | Value supplied to height and width attributes of SVG element. |
 | className | string         |              | Classes supplied to the SVG element.                          |
 
-### Typeface Logos
+### Typeface logos
 
 ```javascript
 import { Neeto } from "@bigbinary/neeto-icons/typeface-logos";
