@@ -15,6 +15,9 @@
     "./logos": {
       "import": "./dist/neeto-logos.js"
     },
+    "./misc": {
+      "import": "./dist/misc.js"
+    },
     ".": {
       "import": "./dist/neeto-icons.js"
     }
