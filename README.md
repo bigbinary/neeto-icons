@@ -32,6 +32,12 @@ import { Neeto } from "@bigbinary/neeto-icons/logos";
 import { NeetoSocial } from "@bigbinary/neeto-icons/app-icons";
 ```
 
+### Misc icons
+
+```javascript
+import { Google } from "@bigbinary/neeto-icons/misc";
+```
+
 ### Props
 
 | Name      | Type           | Default      | Description                                                   |
