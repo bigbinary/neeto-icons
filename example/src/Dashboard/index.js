@@ -6,6 +6,7 @@ import * as icons from "../../../lib/icons";
 import * as logos from "../../../lib/logos";
 import * as appIcons from "../../../lib/app-icons";
 import * as typefaceLogos from "../../../lib/typeface-logos";
+import * as miscIcons from "../../../lib/misc";
 
 function Dashboard() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -26,6 +27,8 @@ function Dashboard() {
         listName="typefaceLogos"
         className="grid w-full grid-cols-2 gap-4 px-8 py-4 md:grid-cols-2 lg:grid-cols-4"
       />
+      <h2 className="px-8 pt-4">Misc Icons</h2>
+      <IconsList searchTerm={searchTerm} icons={miscIcons} listName="miscIcons" />
     </>
   );
 }

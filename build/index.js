@@ -36,3 +36,9 @@ generateIcons({
   source: "./source/typefaceLogos/**.svg",
   addExtraReplacements: (svgString) => svgString.replace("width={size}", "width={width}").replace("height={size}", "height={height}"),
 });
+
+generateIcons({
+  template: "./build/misc-template.ejs",
+  destination: "./lib/misc",
+  source: "./source/misc/**.svg",
+});
