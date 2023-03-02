@@ -24,7 +24,7 @@ const input = Object.fromEntries([
 ]);
 
 // Export non index chunks in `esm/_internal` (enables tree shaking but detracts user from importing them directly).
-const renameFile = (info) => {
+const renameFile = (info, format) => {
   let name = info.name;
   if (
     ![
@@ -37,18 +37,28 @@ const renameFile = (info) => {
   ) {
     name = `_internal/${name}`;
   }
-  return `${name}.js`;
+  if (name.includes("internal")) {
+    const nameWithoutExtension = name.slice(0, -3);
+    return format === "esm"
+      ? `${nameWithoutExtension}.js`
+      : `${nameWithoutExtension}.cjs.js`;
+  }
+  return format === "esm" ? `${name}.js` : `${name}.cjs.js`;
 };
+
+const format = ["esm", "cjs"];
+
+const output = format.map((format) => ({
+  format,
+  sourcemap: true,
+  dir: path.join(DIST_PATH),
+  chunkFileNames: (info) => renameFile(info, format),
+  entryFileNames: (info) => renameFile(info, format),
+}));
 
 export default {
   input,
-  output: {
-    format: "esm",
-    sourcemap: true,
-    dir: path.join(DIST_PATH),
-    chunkFileNames: renameFile,
-    entryFileNames: renameFile,
-  },
+  output,
   plugins: [
     // Clean dist dir
     cleaner({ targets: [DIST_PATH] }),
