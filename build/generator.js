@@ -11,7 +11,7 @@ const ejs = require("ejs");
 module.exports.generateIcons = async ({
   template,
   source = "./source/icons/**.svg",
-  destination = "./lib/icons",
+  destination = "./src/icons",
   performExtraAttributeOperations = () => {},
   addExtraReplacements = (string) => string,
 }) => {

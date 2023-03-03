@@ -12,12 +12,12 @@ export const extensions = [".js", ".jsx"];
 
 // Compile index & compile separately every elements exported by it.
 const input = Object.fromEntries([
-  ["neeto-icons", "./lib/icons/index.js"],
-  ["neeto-logos", "./lib/logos/index.js"],
-  ["app-icons", "./lib/app-icons/index.js"],
-  ["typeface-logos", "./lib/typeface-logos/index.js"],
-  ["misc", "./lib/misc/index.js"],
-  ...glob.sync("./lib/icons/*").map((componentPath) => {
+  ["neeto-icons", "./src/icons/index.js"],
+  ["neeto-logos", "./src/logos/index.js"],
+  ["app-icons", "./src/app-icons/index.js"],
+  ["typeface-logos", "./src/typeface-logos/index.js"],
+  ["misc", "./src/misc/index.js"],
+  ...glob.sync("./src/icons/*").map((componentPath) => {
     const componentName = path.basename(componentPath);
     return [componentName, componentPath];
   }),

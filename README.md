@@ -68,14 +68,14 @@ Anywhere in your React file
 ### How it works
 
 - It uses a script (`build/generate.js`) to take all the `.svg` files from the `source` folder and converts them to React components that render the SVG icon.
-- For each icon, a React icon file will be generated in `lib/icons` folder.
+- For each icon, a React icon file will be generated in `src/icons` folder.
 - The name of the file will be suffixed with `Icon`.
-- If there's a `Clock.svg` in the `source` folder, the script will create a `ClockIcon.js` file in `lib/icons`.
-- It will also add the necessary export statements in `lib/index.js`
+- If there's a `Clock.svg` in the `source` folder, the script will create a `ClockIcon.js` file in `src/icons`.
+- It will also add the necessary export statements in `src/index.js`
 
 ### Build process
 
 - Running `yarn build` will invoke the `yarn generate` script first, which will generate React components from `.svg` files.
-- Once `yarn generate` is done, it'll invoke `yarn rollup-compile` which uses `index.js` of the icons sets inside `lib` as the entry point to create respective bundles (`dist/neeto-icons.js`,`dist/app-icons.js`,`dist/logos.js`).
+- Once `yarn generate` is done, it'll invoke `yarn rollup-compile` which uses `index.js` of the icons sets inside `src` as the entry point to create respective bundles (`dist/neeto-icons.js`,`dist/app-icons.js`,`dist/logos.js`).
 - We use the generated bundle as the `main` file in `package.json` for using it as a package.
 - Running the `yarn start` will run the preview in local.
