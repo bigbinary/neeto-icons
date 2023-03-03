@@ -48,6 +48,9 @@
     "mkdirp": "^1.0.4",
     "path": "^0.12.7",
     "prettier": "^2.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-hot-toast": "^2.1.1",
     "rollup": "2.62.0",
     "rollup-plugin-analyzer": "4.0.0",
@@ -59,10 +62,7 @@
     "uppercamelcase": "^3.0.0",
     "webpack": "^5.64.1",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.5.0",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "webpack-dev-server": "^4.5.0"
   },
   "repository": "https://github.com/bigbinary/neeto-icons.git",
   "sideEffects": false
