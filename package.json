@@ -59,9 +59,7 @@
     "uppercamelcase": "^3.0.0",
     "webpack": "^5.64.1",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.5.0"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^4.5.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
