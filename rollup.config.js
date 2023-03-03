@@ -38,7 +38,7 @@ const renameFile = (info, format) => {
     name = `_internal/${name}`;
   }
   if (name.includes("internal")) {
-    const nameWithoutExtension = name.slice(0, -3);
+    const nameWithoutExtension = name.substr(0, name.lastIndexOf("."));
     return format === "esm"
       ? `${nameWithoutExtension}.js`
       : `${nameWithoutExtension}.cjs.js`;
@@ -46,9 +46,9 @@ const renameFile = (info, format) => {
   return format === "esm" ? `${name}.js` : `${name}.cjs.js`;
 };
 
-const format = ["esm", "cjs"];
+const formats = ["esm", "cjs"];
 
-const output = format.map((format) => ({
+const output = formats.map((format) => ({
   format,
   sourcemap: true,
   dir: path.join(DIST_PATH),
