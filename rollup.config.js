@@ -38,7 +38,9 @@ const renameFile = (info, format) => {
     name = `_internal/${name}`;
   }
   if (name.includes("internal")) {
-    const nameWithoutExtension = name.substr(0, name.lastIndexOf("."));
+    const nameWithoutExtension = name.includes(".")
+      ? name.substr(0, name.lastIndexOf("."))
+      : name;
     return format === "esm"
       ? `${nameWithoutExtension}.js`
       : `${nameWithoutExtension}.cjs.js`;
