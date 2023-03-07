@@ -63,8 +63,8 @@ module.exports = {
     publicPath: "/",
   },
   devServer: {
+    host: "0.0.0.0",
     historyApiFallback: true,
-    disableHostCheck: true,
   },
   plugins: [
     new HtmlWebPackPlugin({
