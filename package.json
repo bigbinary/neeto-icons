@@ -35,6 +35,14 @@
     "rollup-compile": "NODE_ENV=production rollup -c --mode production",
     "build": "yarn generate && yarn rollup-compile"
   },
+  "files": [
+    "dist",
+    "app-icons.d.ts",
+    "index.d.ts",
+    "logos.d.ts",
+    "misc.d.ts",
+    "typeface-logos.d.ts"
+  ],
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
