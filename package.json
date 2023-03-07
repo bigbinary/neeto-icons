@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.js",
-    "build-preview": "NODE_ENV=production webpack serve --open --mode production --config webpack.dev.config.js --port 3000 --disable-host-check",
+    "build-preview": "NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.js --port 3000",
     "generate": "node build/index.js",
     "rollup-compile": "NODE_ENV=production rollup -c --mode production",
     "build": "yarn generate && yarn rollup-compile"
@@ -67,7 +67,7 @@
     "style-loader": "^3.3.1",
     "uppercamelcase": "^3.0.0",
     "webpack": "^5.64.1",
-    "webpack-cli": "^4.9.1",
+    "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.5.0"
   },
   "repository": "https://github.com/bigbinary/neeto-icons.git",
