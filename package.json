@@ -37,11 +37,7 @@
   },
   "files": [
     "dist",
-    "app-icons.d.ts",
-    "index.d.ts",
-    "logos.d.ts",
-    "misc.d.ts",
-    "typeface-logos.d.ts"
+    "*.d.ts"
   ],
   "devDependencies": {
     "@babel/core": "^7.14.6",
