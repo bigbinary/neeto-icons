@@ -3,11 +3,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Flag = ({ size, color, strokeWidth, ...other }) => (
-  <svg width={size} height={size} viewBox="0 0 12 13" fill="none" {...other}>
+  <svg width={size} height={size} viewBox="0 0 16 18" fill="none" {...other}>
     <path
-      d="M1.33337 7.33331H10.6667L7.66671 4.33331L10.6667 1.33331H1.33337V12"
+      d="M1 10H15L10.5 5.5L15 1H1V17"
       stroke={color}
-      strokeWidth="1"
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
     />

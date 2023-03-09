@@ -2,17 +2,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const Sections = ({ size, color, strokeWidth, ...other }) => (
+export const MessageBubble = ({ size, color, strokeWidth, ...other }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" {...other}>
     <path
-      d="M18 4H6C4.89543 4 4 4.89543 4 6V8C4 9.10457 4.89543 10 6 10H18C19.1046 10 20 9.10457 20 8V6C20 4.89543 19.1046 4 18 4Z"
-      stroke={color}
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M18 14H6C4.89543 14 4 14.8954 4 16V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V16C20 14.8954 19.1046 14 18 14Z"
+      d="M8 9H16M8 13H14M12 20L9 17H7C6.20435 17 5.44129 16.6839 4.87868 16.1213C4.31607 15.5587 4 14.7956 4 14V8C4 7.20435 4.31607 6.44129 4.87868 5.87868C5.44129 5.31607 6.20435 5 7 5H17C17.7956 5 18.5587 5.31607 19.1213 5.87868C19.6839 6.44129 20 7.20435 20 8V14C20 14.7956 19.6839 15.5587 19.1213 16.1213C18.5587 16.6839 17.7956 17 17 17H15L12 20Z"
       stroke={color}
       strokeWidth={strokeWidth}
       strokeLinecap="round"
@@ -21,13 +14,13 @@ export const Sections = ({ size, color, strokeWidth, ...other }) => (
   </svg>
 );
 
-Sections.defaultProps = {
+MessageBubble.defaultProps = {
   color: "currentColor",
   size: 24,
   strokeWidth: "1.5",
 };
 
-Sections.propTypes = {
+MessageBubble.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

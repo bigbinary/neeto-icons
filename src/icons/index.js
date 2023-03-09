@@ -125,6 +125,7 @@ export * from "./MenuLayout";
 export * from "./MenuSquare";
 export * from "./Merge";
 export * from "./Message";
+export * from "./MessageBubble";
 export * from "./MessageSquare";
 export * from "./Mic";
 export * from "./Minus";
