@@ -3,11 +3,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Ribbon = ({ size, color, strokeWidth, ...other }) => (
-  <svg width={size} height={size} viewBox="0 0 10 14" fill="none" {...other}>
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" {...other}>
     <path
-      d="M2.99996 1.66669H6.99996C7.35358 1.66669 7.69272 1.80716 7.94277 2.05721C8.19282 2.30726 8.33329 2.6464 8.33329 3.00002V12.3334L4.99996 10.3334L1.66663 12.3334V3.00002C1.66663 2.6464 1.8071 2.30726 2.05715 2.05721C2.3072 1.80716 2.64634 1.66669 2.99996 1.66669Z"
+      d="M9 4H15C15.5304 4 16.0391 4.21071 16.4142 4.58579C16.7893 4.96086 17 5.46957 17 6V20L12 17L7 20V6C7 5.46957 7.21071 4.96086 7.58579 4.58579C7.96086 4.21071 8.46957 4 9 4Z"
       stroke={color}
-      strokeWidth="1"
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
