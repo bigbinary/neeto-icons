@@ -2,10 +2,10 @@ import path from "path";
 import glob from "glob";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
+import terser from "@rollup/plugin-terser";
 import analyze from "rollup-plugin-analyzer";
 import babel from "rollup-plugin-babel";
 import cleaner from "rollup-plugin-cleaner";
-import { terser } from "rollup-plugin-terser";
 
 const DIST_PATH = path.resolve(__dirname, "dist");
 export const extensions = [".js", ".jsx"];
