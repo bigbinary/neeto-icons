@@ -73,9 +73,25 @@ Anywhere in your React file
 - If there's a `Clock.svg` in the `source` folder, the script will create a `ClockIcon.js` file in `src/icons`.
 - It will also add the necessary export statements in `src/index.js`
 
-### Build process
 
-- Running `yarn build` will invoke the `yarn generate` script first, which will generate React components from `.svg` files.
-- Once `yarn generate` is done, it'll invoke `yarn rollup-compile` which uses `index.js` of the icons sets inside `src` as the entry point to create respective bundles (`dist/neeto-icons.js`,`dist/app-icons.js`,`dist/logos.js`).
-- We use the generated bundle as the `main` file in `package.json` for using it as a package.
-- Running the `yarn start` will run the preview in local.
+# Building and releasing.
+
+The `@bigbinary/neeto-icons` package gets published to NPM when we
+merge a PR with `patch`, `minor` or `major` label to the `main` branch. The
+`patch` label is used for bug fixes, `minor` label is used for new features and
+`major` label is used for breaking changes. You can checkout the
+`Create and publish releases` workflow in GitHub Actions to get a live update.
+
+In case if you missed to add the label, you can manually publish the package.
+For that first you need to create a PR to update the version number in the
+`package.json` file and merge it to the `main` branch. After merging the PR, you
+need to create a
+[new github release](https://github.com/bigbinary/neeto-icons/releases/new)
+from main branch. Whenever a new release is created with a new version number,
+the github actions will automatically publish the built package to npm. You can
+checkout the `Publish to npm` workflow in GitHub Actions to get a live update.
+
+Please note that before publishing the package, you need to verify the
+functionality in some of the neeto web-apps locally using `yalc` package
+manager. The usage of yalc is explained in this video:
+https://youtu.be/QBiYGP0Rhe0
