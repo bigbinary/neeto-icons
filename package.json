@@ -39,6 +39,11 @@
     "dist",
     "*.d.ts"
   ],
+  "engines": {
+    "node": ">=18.12",
+    "npm": ">=9",
+    "yarn": ">=1.22"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
