@@ -5,6 +5,7 @@ export * from "./GoogleCalendar";
 export * from "./GoogleMeet";
 export * from "./Instagram";
 export * from "./Linear";
+export * from "./Microsoft";
 export * from "./Shopify";
 export * from "./Slack";
 export * from "./Stripe";
