@@ -35,6 +35,7 @@ export * from "./Clock";
 export * from "./Close";
 export * from "./CloseCircle";
 export * from "./Code";
+export * from "./CodeBlock";
 export * from "./Collapse";
 export * from "./Column";
 export * from "./Computer";
