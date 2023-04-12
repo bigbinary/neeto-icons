@@ -3,20 +3,20 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Tablet = ({ size, color, strokeWidth, ...other }) => (
-  <svg width={size} height={size} viewBox="0 0 25 24" fill="none" {...other}>
+  <svg width={size} height={size} fill="none" viewBox="0 0 24 24" {...other}>
     <path
-      d="M18.4184 3H6.62844C6.01816 3 5.52344 3.49473 5.52344 4.105V19.895C5.52344 20.5053 6.01816 21 6.62844 21H18.4184C19.0287 21 19.5234 20.5053 19.5234 19.895V4.105C19.5234 3.49473 19.0287 3 18.4184 3Z"
       stroke={color}
-      strokeWidth={strokeWidth}
+      d="M17.895 3H6.105C5.49473 3 5 3.49473 5 4.105V19.895C5 20.5053 5.49473 21 6.105 21H17.895C18.5053 21 19 20.5053 19 19.895V4.105C19 3.49473 18.5053 3 17.895 3Z"
       strokeLinecap="round"
       strokeLinejoin="round"
+      strokeWidth={strokeWidth}
     />
     <path
-      d="M10.0234 18.5H15.0234"
       stroke={color}
-      strokeWidth={strokeWidth}
+      d="M9.5 18.5H14.5"
       strokeLinecap="round"
       strokeLinejoin="round"
+      strokeWidth={strokeWidth}
     />
   </svg>
 );

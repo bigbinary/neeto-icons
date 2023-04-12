@@ -3,30 +3,30 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Computer = ({ size, color, strokeWidth, ...other }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" {...other}>
+  <svg width={size} height={size} fill="none" viewBox="0 0 24 24" {...other}>
     <path
-      d="M18 3H6C4.34315 3 3 3.97683 3 5.18182V12.8182C3 14.0232 4.34315 15 6 15H18C19.6569 15 21 14.0232 21 12.8182V5.18182C21 3.97683 19.6569 3 18 3Z"
+      d="M18.429 17H5.571C4.151 17 3 15.849 3 14.429V5.571C3 4.151 4.151 3 5.571 3H18.428C19.849 3 21 4.151 21 5.571V14.428C21 15.849 19.849 17 18.429 17V17Z"
       stroke={color}
       strokeWidth={strokeWidth}
       strokeLinecap="round"
-      strokeLinejoin="round"
     />
-    <line
-      x1="3"
-      y1="11.25"
-      x2="21"
-      y2="11.25"
+    <path
+      d="M14 17L14.5 21"
       stroke={color}
-      strokeWidth={strokeWidth}
-    />
-    <line
-      x1="8.75"
-      y1="19.25"
-      x2="15.25"
-      y2="19.25"
-      stroke={color}
-      strokeWidth={strokeWidth}
       strokeLinecap="round"
+      strokeWidth={strokeWidth}
+    />
+    <path
+      d="M10 17L9.5 21"
+      stroke={color}
+      strokeLinecap="round"
+      strokeWidth={strokeWidth}
+    />
+    <path
+      d="M8.13965 21H15.8596"
+      stroke={color}
+      strokeLinecap="round"
+      strokeWidth={strokeWidth}
     />
   </svg>
 );
