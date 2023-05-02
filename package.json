@@ -29,11 +29,10 @@
     }
   },
   "scripts": {
-    "start": "NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.js",
-    "build-preview": "NODE_ENV=production webpack serve --open --mode production --config webpack.dev.config.js --port 3000",
-    "generate": "node build/index.js",
-    "rollup-compile": "NODE_ENV=production rollup -c --mode production",
-    "build": "yarn generate && yarn rollup-compile"
+    "start": "NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.cjs",
+    "build-preview": "NODE_ENV=production webpack serve --open --mode production --config webpack.dev.config.cjs --port 3000",
+    "generate": "node build/index.mjs",
+    "build": "NODE_ENV=production rollup -c --mode production"
   },
   "files": [
     "dist",
@@ -48,14 +47,16 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
+    "@bigbinary/neeto-commons-frontend": "^2.0.71",
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-node-resolve": "13.1.2",
+    "@svgr/core": "^7.0.0",
+    "@svgr/plugin-jsx": "^7.0.0",
+    "@svgr/plugin-prettier": "^7.0.0",
+    "@svgr/plugin-svgo": "^7.0.0",
     "babel-loader": "^8.2.2",
-    "camelcase": "^6.2.0",
-    "cheerio": "^1.0.0-rc.10",
     "copy-to-clipboard": "^3.3.1",
     "css-loader": "^6.5.1",
-    "ejs": "^3.1.6",
     "file-loader": "^6.2.0",
     "glob": "^7.1.7",
     "html-loader": "^3.0.1",
