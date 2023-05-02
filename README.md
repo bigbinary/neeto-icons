@@ -1,6 +1,7 @@
 # neetoIcons
 
-The neetoIcons library is a collection of SVG React component icons that drives the experience in the neeto products built at BigBinary.
+The neetoIcons library is a collection of SVG React component icons that drives
+the experience in the neeto products built at BigBinary.
 
 ### Installation
 
@@ -58,37 +59,45 @@ Anywhere in your React file
 <Neeto height={24} width={48} />
 ```
 
-| Name      | Type           | Default      | Description                                                   |
-| :-------- | :------------- | :----------- | :------------------------------------------------------------ |
-| height      | string, number | 20           | Value supplied to height attribute of SVG element. |
-| width      | string, number | auto           | Value supplied to width attribute of SVG element. |
-| className | string         |              | Classes supplied to the SVG element.                          |
-
+| Name      | Type           | Default | Description                                        |
+| :-------- | :------------- | :------ | :------------------------------------------------- |
+| height    | string, number | 20      | Value supplied to height attribute of SVG element. |
+| width     | string, number | auto    | Value supplied to width attribute of SVG element.  |
+| className | string         |         | Classes supplied to the SVG element.               |
 
 ### How it works
 
-- It uses a script (`build/generate.js`) to take all the `.svg` files from the `source` folder and converts them to React components that render the SVG icon.
-- For each icon, a React icon file will be generated in `src/icons` folder.
-- The name of the file will be suffixed with `Icon`.
-- If there's a `Clock.svg` in the `source` folder, the script will create a `ClockIcon.js` file in `src/icons`.
-- It will also add the necessary export statements in `src/index.js`
+- We use a custom rollup plugin (which can be found in `build/index.mjs`) to
+  take all the `.svg` files from the `source` folder and convert them to React
+  components that render the respective SVG icon.
+- The plugin accepts a configuration object as an argument which can contain the
+  following keys:
 
+  | Name                    | Type       | Description                                                                                                              |
+  | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
+  | options                 | `object`   | Options passed to the transform function from react-svgr. (See [full opions list](https://react-svgr.com/docs/options/)) |
+  | additionTransformations | `function` | Additional string transformation that can be applied to the generated React code.                                        |
+  | source                  | `string`   | Path to the folder where the SVG files are located                                                                       |
+  | destination             | `string`   | Path to the folder to place the generated react code                                                                     |
+
+- For each icon, a React icon file will be generated in `src/icons` folder.
+- From there babel through rollup takes the wheel and generates the bundles.
 
 # Building and releasing.
 
-The `@bigbinary/neeto-icons` package gets published to NPM when we
-merge a PR with `patch`, `minor` or `major` label to the `main` branch. The
-`patch` label is used for bug fixes, `minor` label is used for new features and
-`major` label is used for breaking changes. You can checkout the
-`Create and publish releases` workflow in GitHub Actions to get a live update.
+The `@bigbinary/neeto-icons` package gets published to NPM when we merge a PR
+with `patch`, `minor` or `major` label to the `main` branch. The `patch` label
+is used for bug fixes, `minor` label is used for new features and `major` label
+is used for breaking changes. You can checkout the `Create and publish releases`
+workflow in GitHub Actions to get a live update.
 
 In case if you missed to add the label, you can manually publish the package.
 For that first you need to create a PR to update the version number in the
 `package.json` file and merge it to the `main` branch. After merging the PR, you
 need to create a
-[new github release](https://github.com/bigbinary/neeto-icons/releases/new)
-from main branch. Whenever a new release is created with a new version number,
-the github actions will automatically publish the built package to npm. You can
+[new github release](https://github.com/bigbinary/neeto-icons/releases/new) from
+main branch. Whenever a new release is created with a new version number, the
+github actions will automatically publish the built package to npm. You can
 checkout the `Publish to npm` workflow in GitHub Actions to get a live update.
 
 Please note that before publishing the package, you need to verify the
