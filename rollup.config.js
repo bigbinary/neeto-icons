@@ -5,7 +5,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import analyze from "rollup-plugin-analyzer";
 import babel from "rollup-plugin-babel";
 import { generateComponents } from "./build/index.mjs";
-import componentGenerationConfig from "./componentGenerationConfig.mjs";
+import componentGenerationConfig from "./build/componentGenerationConfig.mjs";
 
 const DIST_PATH = path.resolve(__dirname, "dist");
 const SRC_PATH = path.resolve(__dirname, "src");
