@@ -8,7 +8,6 @@ import { generateComponents } from "./build/index.mjs";
 import componentGenerationConfig from "./build/componentGenerationConfig.mjs";
 
 const DIST_PATH = path.resolve(__dirname, "dist");
-const SRC_PATH = path.resolve(__dirname, "src");
 export const extensions = [".js", ".jsx"];
 
 // Compile index & compile separately every elements exported by it.
