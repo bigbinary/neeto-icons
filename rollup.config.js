@@ -4,9 +4,11 @@ import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import analyze from "rollup-plugin-analyzer";
 import babel from "rollup-plugin-babel";
-import cleaner from "rollup-plugin-cleaner";
+import { generateComponents } from "./build/index.mjs";
+import componentGenerationConfig from "./componentGenerationConfig.mjs";
 
 const DIST_PATH = path.resolve(__dirname, "dist");
+const SRC_PATH = path.resolve(__dirname, "src");
 export const extensions = [".js", ".jsx"];
 
 // Compile index & compile separately every elements exported by it.
@@ -61,8 +63,8 @@ export default {
   input,
   output,
   plugins: [
-    // Clean dist dir
-    cleaner({ targets: [DIST_PATH] }),
+    // generate components
+    generateComponents(componentGenerationConfig),
     // Analyze created bundle.
     analyze(),
     // Resolve source files.
