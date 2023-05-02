@@ -12,7 +12,7 @@ export const generateComponents = (options = {}) => {
       await options.forEach(({
         options = {},
         source = "./source/icons/**.svg",
-        additionalTransformation = (string) => string,
+        additionalTransformations = (string) => string,
         destination = "./src/icons",
       }) => {
         try {
@@ -50,7 +50,7 @@ export const generateComponents = (options = {}) => {
                 componentName + ".js",
               );
 
-              const reactComponent = additionalTransformation(transform.sync(
+              const reactComponent = additionalTransformations(transform.sync(
                 svg,
                 options,
                 { componentName, filePath: iconDestination },

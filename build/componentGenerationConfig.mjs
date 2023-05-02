@@ -33,7 +33,7 @@ const componentGenerationConfig = [
       },
       svgProps: { width: "{size}", height: "{size}" },
     },
-    additionalTransformation: (string) =>
+    additionalTransformations: (string) =>
       string.replaceAll("strokeWidth={1.5}", "strokeWidth={strokeWidth}"),
     destination: "./src/icons",
     source: "./source/icons/**.svg",
