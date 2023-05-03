@@ -1,8 +1,8 @@
-import iconTemplate from "./icon-template.mjs";
-import logoTemplate from "./logo-template.mjs";
-import appIconTemplate from "./app-icon-template.mjs";
-import typefaceLogoTemplate from "./typeface-logo-template.mjs";
-import miscTemplate from "./misc-template.mjs";
+import iconTemplate from "./templates/icon-template.mjs";
+import logoTemplate from "./templates/logo-template.mjs";
+import appIconTemplate from "./templates/app-icon-template.mjs";
+import typefaceLogoTemplate from "./templates/typeface-logo-template.mjs";
+import miscTemplate from "./templates/misc-template.mjs";
 
 const plugins = [
   "@svgr/plugin-svgo",

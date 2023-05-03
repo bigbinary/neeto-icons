@@ -80,7 +80,7 @@ Anywhere in your React file
   | source                  | `string`   | Path to the folder where the SVG files are located                                                                       |
   | destination             | `string`   | Path to the folder to place the generated react code                                                                     |
 
-- For each icon, a React icon file will be generated in `src/icons` folder.
+- For each icon, a React icon file will be generated in `generate/icons` folder.
 - From there babel through rollup takes the wheel and generates the bundles.
 
 # Building and releasing.
