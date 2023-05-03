@@ -5,11 +5,11 @@ import path from "path";
 import mkdirp from "mkdirp";
 import { transform } from "@svgr/core";
 
-export const generateComponents = (options = {}) => {
+export const generateComponents = (config = {}) => {
   return {
     name: "generate-components",
-    buildStart: async () => {
-      await options.forEach(({
+    buildStart: () => {
+      config.forEach(({
         options = {},
         source = "./source/icons/**.svg",
         additionalTransformations = (string) => string,
