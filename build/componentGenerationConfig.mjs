@@ -17,24 +17,14 @@ const componentGenerationConfig = [
       template: iconTemplate,
       plugins,
       replaceAttrValues: {
-        "#68737D": "{color}",
-        "#fff": "{color}",
-        "#C2C8CC": "{color}",
-        "#F8F9F9": "{color}",
-        "#F3CD82": "{color}",
-        "#49545C": "{color}",
-        "#323232": "{color}",
-        "#276EF1": "{color}",
-        "#2F3941": "{color}",
-        "#00BA88": "{color}",
-        "#87929D": "{color}",
-        "#F56A58": "{color}",
-        "#4B2876": "{color}",
+        "placeholder": "{color}",
       },
       svgProps: { width: "{size}", height: "{size}" },
     },
-    additionalTransformations: (string) =>
-      string.replaceAll("strokeWidth={1.5}", "strokeWidth={strokeWidth}"),
+    additionalTransformations: (element) => element
+      .attr("fill", "{color}")
+      .attr("stroke", "{color}")
+      .attr("strokeWidth", "{strokeWidth}"),
     destination: "./src/icons",
     source: "./source/icons/**.svg",
   },

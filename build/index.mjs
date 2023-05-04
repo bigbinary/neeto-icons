@@ -4,12 +4,13 @@ import uppercamelcase from "uppercamelcase";
 import path from "path";
 import mkdirp from "mkdirp";
 import { transform } from "@svgr/core";
+import * as cheerio from "cheerio"
 
 export const generateComponents = (config = {}) => {
   return {
     name: "generate-components",
-    buildStart: () => {
-      config.forEach(({
+    buildStart: async () => {
+      await config.forEach(({
         options = {},
         source = "./source/icons/**.svg",
         additionalTransformations = (string) => string,
@@ -41,20 +42,28 @@ export const generateComponents = (config = {}) => {
             }
 
             icons.forEach((iconPath) => {
-              const svg = fs.readFileSync(iconPath, "utf-8");
+              let svg = cheerio.load(fs.readFileSync(iconPath, "utf-8"), { xmlMode: true });
               const iconName = path.basename(iconPath, path.extname(iconPath));
               const componentName = uppercamelcase(iconName);
 
+              svg("*").each((_, el) => {
+                const element = svg(el)
+                if (el.name === "svg") {
+                  element.removeAttr("class")
+                         .removeAttr("xmlns")
+                }
+                additionalTransformations(element)
+              });
+
               const iconDestination = path.join(
                 destination,
-                componentName + ".js",
-              );
+                componentName + ".js", );
 
-              const reactComponent = additionalTransformations(transform.sync(
-                svg,
+              const reactComponent = transform.sync(
+                svg("svg").toString(),
                 options,
                 { componentName, filePath: iconDestination },
-              ));
+              );
 
               fs.writeFileSync(iconDestination, reactComponent, "utf8");
 
