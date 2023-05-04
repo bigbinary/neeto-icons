@@ -25,7 +25,7 @@ const componentGenerationConfig = [
       .attr("fill", "{color}")
       .attr("stroke", "{color}")
       .attr("strokeWidth", "{strokeWidth}"),
-    destination: "./src/icons",
+    destination: "./generate/icons",
     source: "./source/icons/**.svg",
   },
   {
@@ -35,7 +35,7 @@ const componentGenerationConfig = [
       plugins,
       svgProps: { width: "{size}", height: "{size}" },
     },
-    destination: "./src/logos",
+    destination: "./generate/logos",
     source: "./source/logos/**.svg",
   },
   {
@@ -45,7 +45,7 @@ const componentGenerationConfig = [
       plugins,
       svgProps: { width: "{size}", height: "{size}" },
     },
-    destination: "./src/app-icons",
+    destination: "./generate/app-icons",
     source: "./source/appIcons/**.svg",
   },
   {
@@ -55,7 +55,7 @@ const componentGenerationConfig = [
       plugins,
       svgProps: { width: "{width}", height: "{height}" },
     },
-    destination: "./src/typeface-logos",
+    destination: "./generate/typeface-logos",
     source: "./source/typefaceLogos/**.svg",
   },
   {
@@ -65,7 +65,7 @@ const componentGenerationConfig = [
       plugins,
       svgProps: { width: "{size}", height: "{size}" },
     },
-    destination: "./src/misc",
+    destination: "./generate/misc",
     source: "./source/misc/**.svg",
   },
 ];
