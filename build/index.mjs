@@ -14,7 +14,7 @@ export const generateComponents = (config = {}) => {
         options = {},
         source = "./source/icons/**.svg",
         additionalTransformations = (string) => string,
-        destination = "./src/icons",
+        destination = "./generate/icons",
       }) => {
         try {
           const encodingStandard = "utf-8"
