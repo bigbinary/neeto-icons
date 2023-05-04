@@ -17,14 +17,15 @@ export const generateComponents = (config = {}) => {
         destination = "./src/icons",
       }) => {
         try {
+          const encodingStandard = "utf-8"
           const indexFilePath = path.join(destination, "index.js");
+          const directory = path.parse(indexFilePath).dir;
 
           // make the directory
-          const directory = path.parse(indexFilePath).dir;
           mkdirp.sync(directory);
 
           // make the index file
-          fs.writeFileSync(indexFilePath, "", "utf-8");
+          fs.writeFileSync(indexFilePath, "", encodingStandard);
 
           // make the icon folder
           mkdirp.sync(destination);
@@ -42,10 +43,16 @@ export const generateComponents = (config = {}) => {
             }
 
             icons.forEach((iconPath) => {
-              let svg = cheerio.load(fs.readFileSync(iconPath, "utf-8"), { xmlMode: true });
+              let svg = cheerio.load(fs.readFileSync(iconPath, encodingStandard), { xmlMode: true });
               const iconName = path.basename(iconPath, path.extname(iconPath));
               const componentName = uppercamelcase(iconName);
+              const importStatement = `export * from "./${componentName}";\r\n`
+              const iconDestination = path.join(
+                destination,
+                componentName + ".js", );
 
+              // perform some santization and specific transformations besides
+              // the ones provided to us by svgr
               svg("*").each((_, el) => {
                 const element = svg(el)
                 if (el.name === "svg") {
@@ -55,23 +62,17 @@ export const generateComponents = (config = {}) => {
                 additionalTransformations(element)
               });
 
-              const iconDestination = path.join(
-                destination,
-                componentName + ".js", );
-
+              // generate component code
               const reactComponent = transform.sync(
                 svg("svg").toString(),
                 options,
                 { componentName, filePath: iconDestination },
               );
 
-              fs.writeFileSync(iconDestination, reactComponent, "utf8");
-
-              fs.appendFileSync(
-                path.join(destination, "index.js"),
-                `export * from "./${componentName}";\r\n`,
-                "utf-8",
-              );
+              // write component to file
+              fs.writeFileSync(iconDestination, reactComponent, encodingStandard);
+              // append component import statement to the index file
+              fs.appendFileSync( indexFilePath, importStatement, encodingStandard );
             });
           });
         } catch (err) {
