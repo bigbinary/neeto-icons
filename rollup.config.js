@@ -23,30 +23,6 @@ const input = Object.fromEntries([
   }),
 ]);
 
-// Export non index chunks in `esm/_internal` (enables tree shaking but detracts user from importing them directly).
-const renameFile = (info, format) => {
-  let name = info.name;
-  if (
-    ![
-      "neeto-icons",
-      "neeto-logos",
-      "app-icons",
-      "typeface-logos",
-      "misc",
-    ].includes(name)
-  ) {
-    name = `_internal/${name}`;
-  }
-  if (name.includes("internal")) {
-    const nameWithoutExtension = name.includes(".")
-      ? name.substr(0, name.lastIndexOf("."))
-      : name;
-    return format === "esm"
-      ? `${nameWithoutExtension}.js`
-      : `${nameWithoutExtension}.cjs.js`;
-  }
-  return format === "esm" ? `${name}.js` : `${name}.cjs.js`;
-};
 
 const formats = ["esm", "cjs"];
 
@@ -54,8 +30,6 @@ const output = formats.map((format) => ({
   format,
   sourcemap: true,
   dir: path.join(DIST_PATH),
-  chunkFileNames: (info) => renameFile(info, format),
-  entryFileNames: (info) => renameFile(info, format),
 }));
 
 export default {
