@@ -24,7 +24,7 @@ const componentGenerationConfig = [
     },
     additionalTransformations: (attribute, element) => {
     if (element.attr(attribute) === "none") return;
-    if (element.attr(attribute) === "stroke-width") {
+    if (attribute === "stroke-width") {
       element.attr(attribute, "strokeWidthPlaceholder")
     };
     if (["fill", "stroke"].includes(attribute)) {
