@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import Header from "./Header";
 import IconsList from "./IconsList";
 import { Toaster } from "react-hot-toast";
-import * as icons from "../../../src/icons";
-import * as logos from "../../../src/logos";
-import * as appIcons from "../../../src/app-icons";
-import * as typefaceLogos from "../../../src/typeface-logos";
-import * as miscIcons from "../../../src/misc";
+import * as icons from "../../../generate/icons";
+import * as logos from "../../../generate/logos";
+import * as appIcons from "../../../generate/app-icons";
+import * as typefaceLogos from "../../../generate/typeface-logos";
+import * as miscIcons from "../../../generate/misc";
 
 function Dashboard() {
   const [searchTerm, setSearchTerm] = useState("");
