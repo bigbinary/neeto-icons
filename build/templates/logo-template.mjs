@@ -1,5 +1,4 @@
-const logoTemplate = ({ componentName, jsx }, { tpl }) => {
-  return tpl`
+const logoTemplate = ({ componentName, jsx }, { tpl }) => tpl`
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -16,5 +15,5 @@ ${componentName}.propTypes = {
   ]),
 };
   `;
-};
+
 export default logoTemplate;

@@ -1,8 +1,4 @@
-const miscTemplate = (
-  { componentName, jsx },
-  { tpl },
-) => {
-  return tpl`
+const miscTemplate = ( { componentName, jsx }, { tpl }, ) => tpl`
 import React from "react";
 import PropTypes from 'prop-types';
 
@@ -17,9 +13,6 @@ ${componentName}.propTypes = {
     PropTypes.string,
     PropTypes.number
   ]),
-};
-
-  `;
-};
+};`;
 
 export default miscTemplate;

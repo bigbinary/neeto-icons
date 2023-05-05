@@ -1,5 +1,4 @@
-const iconTemplate = ({ componentName, jsx }, { tpl }) => {
-  return tpl`
+const iconTemplate = ({ componentName, jsx }, { tpl }) => tpl`
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -25,6 +24,5 @@ ${componentName}.propTypes = {
   ])
 };
   `;
-};
 
 export default iconTemplate;

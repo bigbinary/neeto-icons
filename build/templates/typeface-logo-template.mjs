@@ -1,8 +1,4 @@
-const typefaceLogoTemplate = (
-  { componentName, jsx },
-  { tpl },
-) => {
-  return tpl`
+const typefaceLogoTemplate = ( { componentName, jsx }, { tpl }, ) => tpl`
 import React from "react";
 import PropTypes from 'prop-types';
 
@@ -22,8 +18,6 @@ ${componentName}.propTypes = {
     PropTypes.number
   ]),
 
-};
-  `;
-};
+};`;
 
 export default typefaceLogoTemplate;

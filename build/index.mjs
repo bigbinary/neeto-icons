@@ -43,7 +43,7 @@ export const generateComponents = (config = {}) => {
             }
 
             icons.forEach((iconPath) => {
-              let svg = cheerio.load(fs.readFileSync(iconPath, encodingStandard), { xmlMode: true });
+              const svg = cheerio.load(fs.readFileSync(iconPath, encodingStandard), { xmlMode: true });
               const iconName = path.basename(iconPath, path.extname(iconPath));
               const componentName = uppercamelcase(iconName);
               const importStatement = `export * from "./${componentName}";\r\n`
