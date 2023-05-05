@@ -18,13 +18,18 @@ const componentGenerationConfig = [
       plugins,
       replaceAttrValues: {
         "placeholder": "{color}",
+        "strokeWidthPlaceholder": "{strokeWidth}",
       },
       svgProps: { width: "{size}", height: "{size}" },
     },
-    additionalTransformations: (element) => element
-      .attr("fill", "{color}")
-      .attr("stroke", "{color}")
-      .attr("strokeWidth", "{strokeWidth}"),
+    additionalTransformations: (attribute, element) => {
+    if (element.attr(attribute) === "none") return;
+    if (element.attr(attribute) === "stroke-width") {
+      element.attr(attribute, "strokeWidthPlaceholder")
+    };
+    if (["fill", "stroke"].includes(attribute)) {
+      element.attr(attribute, "placeholder");
+    }},
     destination: "./generate/icons",
     source: "./source/icons/**.svg",
   },

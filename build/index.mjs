@@ -55,11 +55,13 @@ export const generateComponents = (config = {}) => {
               // the ones provided to us by svgr
               svg("*").each((_, el) => {
                 const element = svg(el)
+                Object.keys(el.attribs).forEach((attribute) => {
+                  additionalTransformations(attribute, svg(el));
+                })
                 if (el.name === "svg") {
                   element.removeAttr("class")
                          .removeAttr("xmlns")
                 }
-                additionalTransformations(element)
               });
 
               // generate component code
