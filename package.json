@@ -80,5 +80,6 @@
     "webpack-dev-server": "^4.5.0"
   },
   "repository": "https://github.com/bigbinary/neeto-icons.git",
+  "homepage": "https://neeto-icons.neeto.com",
   "sideEffects": false
 }
