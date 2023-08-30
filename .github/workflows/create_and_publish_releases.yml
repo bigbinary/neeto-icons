@@ -85,13 +85,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
+
+      - name: Setup git user
+        run: |
+          git config user.name "Abhay V Ashokan"
+          git config user.email "abhay.ashokan@bigbinary.com"
 
       - name: Setup NodeJS LTS version
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516
         with:
-          node-version: '18.12.0'
-          
+          node-version-file: '.nvmrc'
+
       - name: Generate native icons
         working-directory: ./native
         run: yarn generate
