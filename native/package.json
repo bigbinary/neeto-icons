@@ -5,7 +5,7 @@
   "author": "sangameshsomawar",
   "license": "MIT",
   "scripts": {
-    "generate": "npx @svgr/cli  --out-dir dist --native --index-template index-template.js -- ../source"
+    "generate": "npx --yes @svgr/cli  --out-dir dist --native --index-template index-template.js -- ../source"
   },
   "devDependencies": {},
   "dependencies": {},
