@@ -79,3 +79,23 @@ jobs:
         with:
           access: "public"
           token: ${{ secrets.NPM_TOKEN }}
+
+  generate_and_publish_native:
+    name: "Generate and Publish Native Icons"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS LTS version
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.12.0'
+          
+      - name: Generate native icons
+        working-directory: ./native
+        run: yarn generate
+
+      - name: Publish native package to NPM
+        working-directory: ./native
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc && yarn publish --access public
