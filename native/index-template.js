@@ -57,7 +57,6 @@ const preserveCamelCase = (
   string,
   toLowerCase,
   toUpperCase,
-  preserveConsecutiveUppercase
 ) => {
   let isLastCharLower = false;
   let isLastCharUpper = false;
@@ -78,7 +77,7 @@ const preserveCamelCase = (
       isLastCharUpper &&
       isLastLastCharUpper &&
       LOWERCASE.test(character) &&
-      (!isLastLastCharPreserved || preserveConsecutiveUppercase)
+      (!isLastLastCharPreserved)
     ) {
       string = string.slice(0, index - 1) + "-" + string.slice(index - 1);
       isLastLastCharUpper = isLastCharUpper;
@@ -98,11 +97,6 @@ const preserveCamelCase = (
   return string;
 };
 
-const preserveConsecutiveUppercase = (input, toLowerCase) => {
-  LEADING_CAPITAL.lastIndex = 0;
-
-  return input.replaceAll(LEADING_CAPITAL, (match) => toLowerCase(match));
-};
 
 const postProcess = (input, toUpperCase) => {
   SEPARATORS_AND_IDENTIFIER.lastIndex = 0;
@@ -119,16 +113,10 @@ const postProcess = (input, toUpperCase) => {
     );
 };
 
-function camelCase(input, options) {
+function camelCase(input) {
   if (!(typeof input === "string" || Array.isArray(input))) {
     throw new TypeError("Expected the input to be `string | string[]`");
   }
-
-  options = {
-    pascalCase: false,
-    preserveConsecutiveUppercase: false,
-    ...options,
-  };
 
   if (Array.isArray(input)) {
     input = input
@@ -143,22 +131,16 @@ function camelCase(input, options) {
     return "";
   }
 
-  const toLowerCase =
-    options.locale === false
-      ? (string) => string.toLowerCase()
-      : (string) => string.toLocaleLowerCase(options.locale);
+  const toLowerCase = (string) => string.toLowerCase();
 
-  const toUpperCase =
-    options.locale === false
-      ? (string) => string.toUpperCase()
-      : (string) => string.toLocaleUpperCase(options.locale);
+  const toUpperCase = (string) => string.toUpperCase();
 
   if (input.length === 1) {
     if (SEPARATORS.test(input)) {
       return "";
     }
 
-    return options.pascalCase ? toUpperCase(input) : toLowerCase(input);
+    return toUpperCase(input);
   }
 
   const hasUpperCase = input !== toLowerCase(input);
@@ -168,19 +150,12 @@ function camelCase(input, options) {
       input,
       toLowerCase,
       toUpperCase,
-      options.preserveConsecutiveUppercase
     );
   }
 
   input = input.replace(LEADING_SEPARATORS, "");
-  input = options.preserveConsecutiveUppercase
-    ? preserveConsecutiveUppercase(input, toLowerCase)
-    : toLowerCase(input);
-
-  if (options.pascalCase) {
-    input = toUpperCase(input.charAt(0)) + input.slice(1);
-  }
-
+  input = toLowerCase(input);
+  input = toUpperCase(input.charAt(0)) + input.slice(1);
   return postProcess(input, toUpperCase);
 }
 
