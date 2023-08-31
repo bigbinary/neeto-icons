@@ -29,7 +29,12 @@ import { Clock } from "@bigbinary/neeto-icons";
 React Native:
 
 ```javascript
-import { Clock } from "@bigbinary/neeto-icons-rn";
+import { Icons } from "@bigbinary/neeto-icons-rn";
+import { Logos } from "@bigbinary/neeto-icons-rn";
+import { Misc as MiscIcons } from "@bigbinary/neeto-icons-rn";
+import { TypefaceLogos } from "@bigbinary/neeto-icons-rn";
+
+const { Archive } = Icons;
 ```
 
 Anywhere in your React file
