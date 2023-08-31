@@ -8,10 +8,10 @@ function defaultIndexTemplate(filePaths) {
       path.extname(filePath.originalPath)
     );
     const exportName = /^\d/.test(basename)
-      ? camelCase(`Svg${basename}`, { pascalCase: true })
-      : camelCase(basename, { pascalCase: true });
+      ? pascalCase(`Svg${basename}`, { pascalCase: true })
+      : pascalCase(basename, { pascalCase: true });
 
-    return `export { default as ${exportName} } from './${camelCase(basename, {
+    return `export { default as ${exportName} } from './${pascalCase(basename, {
       pascalCase: true,
     })}'`;
   });
@@ -24,13 +24,13 @@ function defaultIndexTemplate(filePaths) {
   const indexPath = path.join(distPath, "index.js");
   const importStatements = folderNames.map(
     (folderName) =>
-      `import * as ${camelCase(folderName, {
+      `import * as ${pascalCase(folderName, {
         pascalCase: true,
       })} from './${folderName}';`
   );
   let indexContent = importStatements;
   const exportStatements = folderNames.map(
-    (folderName) => `${camelCase(folderName, { pascalCase: true })}`
+    (folderName) => `${pascalCase(folderName, { pascalCase: true })}`
   );
 
   const exportStatement = `export { ${exportStatements.join(", ")} };`;
@@ -42,7 +42,6 @@ function defaultIndexTemplate(filePaths) {
 
 const UPPERCASE = /[\p{Lu}]/u;
 const LOWERCASE = /[\p{Ll}]/u;
-const LEADING_CAPITAL = /^[\p{Lu}](?![\p{Lu}])/gu;
 const IDENTIFIER = /([\p{Alpha}\p{N}_]|$)/u;
 const SEPARATORS = /[_.\- ]+/;
 
@@ -53,7 +52,7 @@ const SEPARATORS_AND_IDENTIFIER = new RegExp(
 );
 const NUMBERS_AND_IDENTIFIER = new RegExp("\\d+" + IDENTIFIER.source, "gu");
 
-const preserveCamelCase = (
+const preservepascalCase = (
   string,
   toLowerCase,
   toUpperCase,
@@ -113,7 +112,7 @@ const postProcess = (input, toUpperCase) => {
     );
 };
 
-function camelCase(input) {
+function pascalCase(input) {
   if (!(typeof input === "string" || Array.isArray(input))) {
     throw new TypeError("Expected the input to be `string | string[]`");
   }
@@ -146,7 +145,7 @@ function camelCase(input) {
   const hasUpperCase = input !== toLowerCase(input);
 
   if (hasUpperCase) {
-    input = preserveCamelCase(
+    input = preservepascalCase(
       input,
       toLowerCase,
       toUpperCase,
