@@ -8,19 +8,19 @@ function defaultIndexTemplate(filePaths) {
       path.extname(filePath.originalPath)
     );
     const exportName = /^\d/.test(basename)
-      ? convertToCamelCase(`Svg${basename}`)
-      : convertToCamelCase(basename);
+      ? convertToPascalCase(`Svg${basename}`)
+      : convertToPascalCase(basename);
     return `export { default as ${exportName} } from './${basename}'`;
   });
   return exportEntries.join("\n");
 }
 
-function convertToCamelCase(input) {
+function convertToPascalCase(input) {
   const words = input.split("-");
-  const camelCaseWords = words.map(
+  const pascalCaseWords = words.map(
     (word) => word.charAt(0).toUpperCase() + word.slice(1)
   );
-  return camelCaseWords.join("");
+  return pascalCaseWords.join("");
 }
 
 module.exports = defaultIndexTemplate;
