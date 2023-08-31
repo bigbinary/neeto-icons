@@ -5,6 +5,7 @@
 /out-tsc
 /dist
 /generate
+native/dist
 
 # Runtime data
 pids
