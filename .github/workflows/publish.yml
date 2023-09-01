@@ -27,3 +27,24 @@ jobs:
         with:
           access: "public"
           token: ${{ secrets.NPM_TOKEN }}
+
+  publish_native:
+    name: Publish Native Package to npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Setup NodeJS LTS version
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.12.0"
+
+      - name: Generate native icons
+        working-directory: ./native
+        run: yarn generate
+
+      - name: Publish the native package on NPM
+        working-directory: ./native
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc && yarn publish --access public
+

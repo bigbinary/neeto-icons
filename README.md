@@ -1,18 +1,41 @@
 # neetoIcons
 
-The neetoIcons library is a collection of SVG React component icons that drives
+The neetoIcons and neetoIconsRN library are a collection of SVG React component icons that drives
 the experience in the neeto products built at BigBinary.
 
 ### Installation
+
+Web:
 
 ```
 yarn add @bigbinary/neeto-icons
 ```
 
+React Native:
+
+```
+yarn add @bigbinary/neeto-icons-rn
+```
+
+
 ### Usage
+
+Web:
 
 ```javascript
 import { Clock } from "@bigbinary/neeto-icons";
+```
+
+React Native:
+
+```javascript
+import { Icons } from "@bigbinary/neeto-icons-rn";
+import { AppIcons } from "@bigbinary/neeto-icons-rn";
+import { Logos } from "@bigbinary/neeto-icons-rn";
+import { Misc as MiscIcons } from "@bigbinary/neeto-icons-rn";
+import { TypefaceLogos } from "@bigbinary/neeto-icons-rn";
+
+const { Archive } = Icons;
 ```
 
 Anywhere in your React file
@@ -85,7 +108,7 @@ Anywhere in your React file
 
 # Building and releasing.
 
-The `@bigbinary/neeto-icons` package gets published to NPM when we merge a PR
+The `@bigbinary/neeto-icons` and `@bigbinary/neeto-icons-rn` package gets published to NPM when we merge a PR
 with `patch`, `minor` or `major` label to the `main` branch. The `patch` label
 is used for bug fixes, `minor` label is used for new features and `major` label
 is used for breaking changes. You can checkout the `Create and publish releases`
@@ -101,6 +124,6 @@ github actions will automatically publish the built package to npm. You can
 checkout the `Publish to npm` workflow in GitHub Actions to get a live update.
 
 Please note that before publishing the package, you need to verify the
-functionality in some of the neeto web-apps locally using `yalc` package
+functionality in some of the neeto web and mobile apps locally using `yalc` package
 manager. The usage of yalc is explained in this video:
 https://youtu.be/QBiYGP0Rhe0
