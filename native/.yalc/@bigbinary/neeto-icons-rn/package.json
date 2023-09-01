@@ -1,0 +1,31 @@
+{
+  "name": "@bigbinary/neeto-icons-rn",
+  "version": "1.0.0",
+  "main": "./dist/icons/index.js",
+  "author": "sangameshsomawar",
+  "license": "MIT",
+  "scripts": {
+    "generate": "npx --yes @svgr/cli  --out-dir dist --native --index-template index-template.js -- ../source"
+  },
+  "exports": {
+    "./typeface-logos": {
+      "import": "./dist/typefaceLogos"
+    },
+    "./app-icons": {
+      "import": "./dist/appIcons"
+    },
+    "./logos": {
+      "import": "./dist/logos"
+    },
+    "./misc": {
+      "import": "./dist/misc"
+    },
+    ".": {
+      "import": "./dist/icons"
+    }
+  },
+  "dependencies": {},
+  "repository": "https://github.com/bigbinary/neeto-icons.git",
+  "sideEffects": false,
+  "yalcSig": "9e228416ce16b42078d370cd900de425"
+}

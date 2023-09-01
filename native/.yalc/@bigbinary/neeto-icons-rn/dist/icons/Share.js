@@ -1,0 +1,20 @@
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
+const SvgShare = (props) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={props.size}
+    height={props.size}
+    fill={props.color}
+    {...props}
+  >
+    <Path
+      stroke="#49545C"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M8.553 10.114a2.667 2.667 0 1 1-3.772 3.772 2.667 2.667 0 0 1 3.772-3.772M19.219 4.781a2.667 2.667 0 1 1-3.772 3.772 2.667 2.667 0 0 1 3.772-3.772M19.219 15.447a2.667 2.667 0 1 1-3.772 3.772 2.667 2.667 0 0 1 3.772-3.772M9.04 10.81l5.92-2.96M9.04 13.19l5.92 2.96"
+    />
+  </Svg>
+);
+export default SvgShare;

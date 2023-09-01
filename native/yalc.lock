@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "@bigbinary/neeto-icons-rn": {
+      "version": "1.0.0",
+      "signature": "9e228416ce16b42078d370cd900de425",
+      "file": true
+    }
+  }
+}
