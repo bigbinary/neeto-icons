@@ -30,8 +30,6 @@ React Native:
 
 ```javascript
 import { Clock } from "@bigbinary/neeto-icons-rn";
-
-const { Archive } = Icons;
 ```
 
 Anywhere in your React file

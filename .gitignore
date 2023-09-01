@@ -6,6 +6,8 @@
 /dist
 /generate
 native/dist
+native/.yalc
+native/.yalc.lock
 
 # Runtime data
 pids
