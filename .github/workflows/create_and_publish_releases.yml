@@ -83,8 +83,6 @@ jobs:
   generate_and_publish_native:
     name: "Generate and Publish Native Icons"
     runs-on: ubuntu-latest
-    if: >-
-      ${{ github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'native') }}
     steps:
       - name: Checkout the repository
         uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
