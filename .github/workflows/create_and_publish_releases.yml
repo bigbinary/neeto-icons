@@ -99,14 +99,17 @@ jobs:
 
       - name: Bump the patch version and create git tag on release
         if: ${{ contains(github.event.pull_request.labels.*.name, 'patch') }}
+        working-directory: ./native
         run: yarn version --patch
 
       - name: Bump the minor version and create git tag on release
         if: ${{ contains(github.event.pull_request.labels.*.name, 'minor') }}
+        working-directory: ./native
         run: yarn version --minor
 
       - name: Bump the major version and create git tag on release
         if: ${{ contains(github.event.pull_request.labels.*.name, 'major') }}
+        working-directory: ./native
         run: yarn version --major
 
       - name: Generate native icons
