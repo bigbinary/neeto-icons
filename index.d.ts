@@ -157,7 +157,6 @@ export const Pause: React.FC<IconProps>;
 export const Phone: React.FC<IconProps>;
 export const Play: React.FC<IconProps>;
 export const Plus: React.FC<IconProps>;
-export const PlusSolid: React.FC<IconProps>;
 export const Print: React.FC<IconProps>;
 export const Puzzle: React.FC<IconProps>;
 export const Quote: React.FC<IconProps>;
