@@ -110,7 +110,7 @@ with `patch`, `minor` or `major` label to the `main` branch.
 
 You can checkout the `Create and publish releases` workflow in GitHub Actions to get a live update.
 
-_No need to raise another PR to bump the version, it will be automatically done by the GitHub action._
+**_No need to raise another PR to bump the version, it will be automatically done by the GitHub action._**
 
 In case if you missed to add the label, you can manually publish the package.
 For that first you need to create a PR to update the version number in the
