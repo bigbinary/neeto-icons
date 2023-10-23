@@ -17,7 +17,6 @@ React Native:
 yarn add @bigbinary/neeto-icons-rn
 ```
 
-
 ### Usage
 
 Web:
@@ -103,10 +102,14 @@ Anywhere in your React file
 # Building and releasing.
 
 The `@bigbinary/neeto-icons` and `@bigbinary/neeto-icons-rn` package gets published to NPM when we merge a PR
-with `patch`, `minor` or `major` label to the `main` branch. The `patch` label
-is used for bug fixes, `minor` label is used for new features and `major` label
-is used for breaking changes. You can checkout the `Create and publish releases`
-workflow in GitHub Actions to get a live update.
+with `patch`, `minor` or `major` label to the `main` branch.
+
+- `patch` label is used for bug fixes
+- `minor` label is used for new features
+- `major` label is used for breaking changes
+
+You can checkout the `Create and publish releases` workflow in GitHub Actions to get a live update.
+**_No need to raise another PR to bump the version, it will be automatically done by the GitHub action._**
 
 In case if you missed to add the label, you can manually publish the package.
 For that first you need to create a PR to update the version number in the
@@ -121,3 +124,9 @@ Please note that before publishing the package, you need to verify the
 functionality in some of the neeto web and mobile apps locally using `yalc` package
 manager. The usage of yalc is explained in this video:
 https://youtu.be/QBiYGP0Rhe0
+
+### Steps to release
+
+- Add/Update icons and bump the package version manually in `native/package.json`
+- Create a Pull Request (PR)
+- Assign the required label and merge the PR to main
