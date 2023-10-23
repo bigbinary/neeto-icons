@@ -10,6 +10,17 @@ const plugins = [
   "@svgr/plugin-prettier",
 ];
 
+const commonProps = {
+  svgoConfig: {
+    plugins: [
+      {
+        name: "prefixIds",
+        active: true,
+      }
+    ]
+  },
+}
+
 const componentGenerationConfig = [
   {
     options: {
@@ -21,6 +32,7 @@ const componentGenerationConfig = [
         "strokeWidthPlaceholder": "{strokeWidth}",
       },
       svgProps: { width: "{size}", height: "{size}" },
+      ...commonProps,
     },
     additionalTransformations: (attribute, element) => {
     if (element.attr(attribute) === "none") return;
@@ -39,6 +51,7 @@ const componentGenerationConfig = [
       template: logoTemplate,
       plugins,
       svgProps: { width: "{size}", height: "{size}" },
+      ...commonProps,
     },
     destination: "./generate/logos",
     source: "./source/logos/**.svg",
@@ -49,6 +62,7 @@ const componentGenerationConfig = [
       template: appIconTemplate,
       plugins,
       svgProps: { width: "{size}", height: "{size}" },
+      ...commonProps,
     },
     destination: "./generate/app-icons",
     source: "./source/appIcons/**.svg",
@@ -59,6 +73,7 @@ const componentGenerationConfig = [
       template: typefaceLogoTemplate,
       plugins,
       svgProps: { width: "{width}", height: "{height}" },
+      ...commonProps,
     },
     destination: "./generate/typeface-logos",
     source: "./source/typefaceLogos/**.svg",
