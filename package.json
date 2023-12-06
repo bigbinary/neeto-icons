@@ -1,6 +1,6 @@
 {
   "name": "@bigbinary/neeto-icons",
-  "version": "1.17.6",
+  "version": "1.17.7",
   "main": "./dist/neeto-icons.cjs.js",
   "module": "./dist/neeto-icons.js",
   "author": "vinay0x",
