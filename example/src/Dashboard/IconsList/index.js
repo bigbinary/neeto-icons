@@ -11,14 +11,12 @@ export default function IconsList({
   icons,
   listName,
   className = DEFAULT_CLASS_NAME,
+  onIconSelect,
+  selectedIcon,
 }) {
   const ref = useRef();
-  const [selectedIcon, setSelectedIcon] = useState(
-    new URL(window.location).searchParams.get("selectedIcon")
-  );
   const onSelect = (name) => {
     copy(name);
-    setSelectedIcon(`${listName}-${name}`);
     toast(`${name} has been copied to clipboard.`, {
       icon: "🎉",
       style: {
@@ -29,9 +27,7 @@ export default function IconsList({
         fontSize: 14,
       },
     });
-    const url = new URL(window.location);
-    url.searchParams.set("selectedIcon", `${listName}-${name}`);
-    window.history.pushState({}, "", url);
+    onIconSelect(`${listName}-${name}`)
   };
 
   useEffect(() => {
