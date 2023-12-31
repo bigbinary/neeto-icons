@@ -1,6 +1,6 @@
 {
   "name": "@bigbinary/neeto-icons",
-  "version": "1.17.7",
+  "version": "1.17.8",
   "main": "./dist/neeto-icons.cjs.js",
   "module": "./dist/neeto-icons.js",
   "author": "vinay0x",
@@ -74,6 +74,7 @@
     "rollup": "2.62.0",
     "rollup-plugin-analyzer": "4.0.0",
     "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-license": "2.6.1",
     "style-loader": "^3.3.1",
     "uppercamelcase": "^3.0.0",
