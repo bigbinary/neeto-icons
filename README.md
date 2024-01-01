@@ -17,6 +17,10 @@ React Native:
 yarn add @bigbinary/neeto-icons-rn
 ```
 
+### Instructions for development
+
+Check the [Frontend package development guide](https://neeto-engineering.neetokb.com/p/a-d34cb4b0) for step-by-step instructions to develop the frontend package.
+
 ### Usage
 
 Web:
