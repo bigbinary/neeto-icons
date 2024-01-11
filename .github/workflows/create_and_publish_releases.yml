@@ -14,6 +14,19 @@ jobs:
       contains(github.event.pull_request.labels.*.name, 'minor') ||
       contains(github.event.pull_request.labels.*.name, 'major') ) }}
     steps:
+      - name: Determine release type
+        id: release-type
+        run: |
+          labels=("${{ join(github.event.pull_request.labels.*.name, ' ') }}")
+          
+          if [[ "${labels[@]}" == *patch* ]]; then
+            echo "::set-output name=RELEASE_TYPE::patch"
+          elif [[ "${labels[@]}" == *minor* ]]; then
+            echo "::set-output name=RELEASE_TYPE::minor"
+          elif [[ "${labels[@]}" == *major* ]]; then
+            echo "::set-output name=RELEASE_TYPE::major"
+          fi
+
       - name: Checkout the repository
         uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
 
@@ -30,8 +43,12 @@ jobs:
       - name: Setup the project
         run: yarn install
 
-      - name: Generate production build
+      - name: Generate production build for web icons
         run: yarn build
+
+      - name: Generate production build for native icons
+        working-directory: ./native
+        run: yarn generate
 
       - name: Prefix version tag with "v"
         run: yarn config set version-tag-prefix "v"
@@ -39,21 +56,12 @@ jobs:
       - name: Disable Git commit hooks
         run: git config core.hooksPath /dev/null
 
-      - name: Bump the patch version and create git tag on release
-        if: ${{ contains(github.event.pull_request.labels.*.name, 'patch') }}
-        run: yarn version --patch
+      - name: Bump version and create tags for web icons
+        run: yarn version --new-version ${{ steps.release-type.outputs.RELEASE_TYPE }} --no-git-tag-version
 
-      - name: Bump the minor version and create git tag on release
-        if: ${{ contains(github.event.pull_request.labels.*.name, 'minor') }}
-        run: yarn version --minor
-
-      - name: Bump the major version and create git tag on release
-        if: ${{ contains(github.event.pull_request.labels.*.name, 'major') }}
-        run: yarn version --major
-
-      - name: Get the package version from package.json
-        uses: tyankatsu0105/read-package-version-actions@5aad2bb630a577ee4255546eb3ee0593df68f6ca
-        id: package-version
+      - name: Bump version and create tags for native icons
+        working-directory: ./native
+        run: yarn version --new-version ${{ steps.release-type.outputs.RELEASE_TYPE }} --no-git-tag-version
 
       - name: Create a new version release commit
         uses: EndBug/add-and-commit@050a66787244b10a4874a2a5f682130263edc192
@@ -66,6 +74,17 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
 
+      - name: Publish web icons to NPM
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc && yarn publish --access public
+ 
+      - name: Publish native icons to NPM
+        working-directory: ./native
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc && yarn publish --access public
+
+      - name: Get the package version from package.json
+        uses: tyankatsu0105/read-package-version-actions@5aad2bb630a577ee4255546eb3ee0593df68f6ca
+        id: package-version
+ 
       - name: Create a release draft on release
         uses: release-drafter/release-drafter@ac463ffd9cc4c6ad5682af93dc3e3591c4657ee3
         env:
@@ -73,49 +92,3 @@ jobs:
         with:
           tag: v${{ steps.package-version.outputs.version }}
           publish: true
-
-      - name: Publish the package on NPM
-        uses: JS-DevTools/npm-publish@22595ff8c4d0d9f53cef0656fbb90fbe06ee885c
-        with:
-          access: "public"
-          token: ${{ secrets.NPM_TOKEN }}
-
-  generate_and_publish_native:
-    name: "Generate and Publish Native Icons"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
-
-      - name: Setup git user
-        run: |
-          git config user.name "Abhay V Ashokan"
-          git config user.email "abhay.ashokan@bigbinary.com"
-
-      - name: Setup NodeJS LTS version
-        uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516
-        with:
-          node-version-file: '.nvmrc'
-
-      - name: Bump the patch version and create git tag on release
-        if: ${{ contains(github.event.pull_request.labels.*.name, 'patch') }}
-        working-directory: ./native
-        run: yarn version --patch
-
-      - name: Bump the minor version and create git tag on release
-        if: ${{ contains(github.event.pull_request.labels.*.name, 'minor') }}
-        working-directory: ./native
-        run: yarn version --minor
-
-      - name: Bump the major version and create git tag on release
-        if: ${{ contains(github.event.pull_request.labels.*.name, 'major') }}
-        working-directory: ./native
-        run: yarn version --major
-
-      - name: Generate native icons
-        working-directory: ./native
-        run: yarn generate
-
-      - name: Publish native package to NPM
-        working-directory: ./native
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc && yarn publish --access public
