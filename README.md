@@ -3,7 +3,13 @@
 The neetoIcons and neetoIconsRN library are a collection of SVG React component icons that drives
 the experience in the neeto products built at BigBinary.
 
-### Installation
+## Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [How it works](#how-it-works)
+  - [Instructions for publishing](#instructions-for-publishing)
+
+## Installation
 
 Web:
 
@@ -85,7 +91,7 @@ Anywhere in your React file
 | width     | string, number | auto    | Value supplied to width attribute of SVG element.  |
 | className | string         |         | Classes supplied to the SVG element.               |
 
-### How it works
+## How it works
 
 - We use a custom rollup plugin (which can be found in `build/index.mjs`) to
   take all the `.svg` files from the `source` folder and convert them to React
@@ -103,33 +109,6 @@ Anywhere in your React file
 - For each icon, a React icon file will be generated in `generate/icons` folder.
 - From there babel through rollup takes the wheel and generates the bundles.
 
-# Building and releasing.
+## Instructions for Publishing
 
-The `@bigbinary/neeto-icons` and `@bigbinary/neeto-icons-rn` package gets published to NPM when we merge a PR
-with `patch`, `minor` or `major` label to the `main` branch.
-
-- `patch` label is used for bug fixes and new icons
-- `minor` label is used for new features
-- `major` label is used for breaking changes
-
-You can checkout the `Create and publish releases` workflow in GitHub Actions to get a live update.
-
-In case if you missed to add the label, you can manually publish the package.
-For that first you need to create a PR to update the version number in the
-`package.json` file and merge it to the `main` branch. After merging the PR, you
-need to create a
-[new github release](https://github.com/bigbinary/neeto-icons/releases/new) from
-main branch. Whenever a new release is created with a new version number, the
-github actions will automatically publish the built package to npm. You can
-checkout the `Publish to npm` workflow in GitHub Actions to get a live update.
-
-Please note that before publishing the package, you need to verify the
-functionality in some of the neeto web and mobile apps locally using `yalc` package
-manager. The usage of yalc is explained in this video:
-https://youtu.be/QBiYGP0Rhe0
-
-### Steps to release
-
-- Add/Update icons and bump the package version manually in `native/package.json`
-- Create a Pull Request (PR)
-- Assign the required label and merge the PR to main
+Consult the [building and releasing packages](https://neeto-engineering.neetokb.com/articles/building-and-releasing-packages) guide for details on how to publish.
