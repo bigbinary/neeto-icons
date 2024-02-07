@@ -1,6 +1,6 @@
 {
   "name": "@bigbinary/neeto-icons-rn",
-  "version": "1.17.12",
+  "version": "1.17.13",
   "main": "./dist/icons/index.js",
   "author": "sangameshsomawar",
   "license": "MIT",
