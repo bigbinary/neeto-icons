@@ -31,7 +31,7 @@
   "scripts": {
     "prebuild": "rimraf generate && rimraf dist",
     "start": "yarn build && NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.cjs",
-    "build-preview": "yarn build && NODE_ENV=production webpack serve --open --mode production --config webpack.dev.config.cjs --port 3000",
+    "build-preview": "NODE_ENV=production webpack serve --open --mode production --config webpack.dev.config.cjs --port 3000",
     "build": "NODE_ENV=production rollup -c"
   },
   "files": [
