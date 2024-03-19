@@ -88,7 +88,7 @@ Anywhere in your React file
 | Name      | Type           | Default | Description                                        |
 | :-------- | :------------- | :------ | :------------------------------------------------- |
 | height    | string, number | 20      | Value supplied to height attribute of SVG element. |
-| width     | string, number | auto    | Value supplied to width attribute of SVG element.  |
+| width     | string, number | 100%    | Value supplied to width attribute of SVG element.  |
 | className | string         |         | Classes supplied to the SVG element.               |
 
 ## How it works
