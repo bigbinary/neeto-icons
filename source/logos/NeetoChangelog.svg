@@ -1,34 +1,8 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M40 20C40 8.95431 31.0457 0 20 0H0V40H40V20Z" fill="url(#paint0_linear_3193_166)" />
-  <g filter="url(#filter0_d_3193_166)">
-    <rect x="25.2081" y="13.4286" width="2.43007" height="15.7488" rx="1.21504" fill="white" />
-    <path fill-rule="evenodd" clip-rule="evenodd"
-      d="M29.0869 23.329C29.2554 23.3937 29.4383 23.4292 29.6295 23.4292C30.4654 23.4292 31.1431 22.7515 31.1431 21.9156V20.7836C31.1431 19.9477 30.4654 19.27 29.6295 19.27C29.4383 19.27 29.2554 19.3055 29.0869 19.3702V23.329Z"
-      fill="white" />
-    <path
-      d="M12.2189 23.2482C12.1869 22.9698 12.2361 22.6881 12.3607 22.437V22.437C13.0428 21.0619 15.114 21.5474 15.114 23.0824V29.8908C15.114 30.4774 14.6384 30.9531 14.0517 30.9531V30.9531C13.5119 30.9531 13.058 30.5483 12.9963 30.0121L12.2189 23.2482Z"
-      fill="white" />
-    <path fill-rule="evenodd" clip-rule="evenodd"
-      d="M9.31224 18.0615C8.88039 18.1531 8.5715 18.5343 8.5715 18.9758V23.9881C8.5715 24.4367 8.89018 24.822 9.33079 24.9061L15.0907 26.0063L15.0907 16.836L9.31224 18.0615ZM16.4693 16.5436L16.4693 26.2697L25.2082 27.9389V14.6903L16.4693 16.5436Z"
-      fill="white" />
-  </g>
-  <defs>
-    <filter id="filter0_d_3193_166" x="8.5715" y="13.4286" width="24.2859" height="19.5245"
-      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-      <feColorMatrix in="SourceAlpha" type="matrix"
-        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-      <feOffset dx="0.857143" dy="1.14286" />
-      <feGaussianBlur stdDeviation="0.428571" />
-      <feComposite in2="hardAlpha" operator="out" />
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0" />
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3193_166" />
-      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3193_166" result="shape" />
-    </filter>
-    <linearGradient id="paint0_linear_3193_166" x1="43.1429" y1="51.8571" x2="6.28572" y2="-3.57143"
-      gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFA768" />
-      <stop offset="0.6986" stop-color="#FF8787" />
-    </linearGradient>
-  </defs>
+<svg width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="458" height="458" rx="110" fill="black"/>
+  <path d="M255.615 298.619C255.615 331.414 229.029 358 196.234 358C163.438 358 136.853 331.414 136.853 298.619C136.853 265.824 163.438 239.238 196.234 239.238C229.029 239.238 255.615 265.824 255.615 298.619Z" fill="#75DC66"/>
+  <path d="M102 224.395C102 187.679 131.764 157.914 168.481 157.914H205.271V290.876H168.481C131.764 290.876 102 261.111 102 224.395Z" fill="#5BCC5A"/>
+  <path d="M205.27 157.912L338.322 101.052C346.839 97.4128 356.304 103.661 356.304 112.923V335.863C356.304 345.125 346.839 351.373 338.322 347.734L205.27 290.874V157.912Z" fill="#5BCC5A"/>
+  <path d="M205.271 239.92L205.27 290.874L168.481 290.876C157.777 290.876 147.663 288.345 138.705 283.85C145.27 258.2 168.538 239.237 196.235 239.237C199.307 239.237 202.325 239.47 205.271 239.92Z" fill="#0DA84C"/>
+  <path d="M254.156 311.763L205.27 290.874L205.271 239.92C233.777 244.273 255.615 268.896 255.615 298.619C255.615 303.136 255.111 307.535 254.156 311.763Z" fill="#0DA84C"/>
 </svg>
