@@ -1,35 +1,7 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 10.7731C0 4.82328 4.82328 0 10.7731 0H29.2269C35.1767 0 40 4.82328 40 10.7731V29.2269C40 35.1767 35.1767 40 29.2269 40H10.7731C4.82328 40 0 35.1767 0 29.2269V10.7731Z" fill="url(#paint0_linear_3502_444)"/>
-<mask id="mask0_3502_444" style="maskType:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
-<rect width="40" height="40" rx="10.7731" fill="url(#paint1_linear_3502_444)"/>
-</mask>
-<g mask="url(#mask0_3502_444)">
-<path d="M37.4194 22.3657C37.4194 12.1514 29.1391 3.87109 18.9248 3.87109H0.430206V40.8603H37.4194V22.3657Z" fill="url(#paint2_linear_3502_444)"/>
-</g>
-<g filter="url(#filter0_d_3502_444)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M27.625 11.9563L27.6505 11.9298H10.6432C10.0619 11.9298 9.59061 12.4011 9.59061 12.9824V14.152H24.0936V14.386H9.59061V26.9006C9.59061 27.4819 10.0619 27.9532 10.6432 27.9532H29.2397C29.8211 27.9532 30.2924 27.4819 30.2924 26.9006V14.5251L27.625 11.9563ZM27.0539 12.5495L21.9123 17.8884L24.6807 20.5544L29.8222 15.2155L27.0539 12.5495ZM21.3552 18.4954L20.44 22.1875L24.0951 21.134L21.3552 18.4954ZM11.345 13.0994C11.345 13.2931 11.1879 13.4502 10.9941 13.4502C10.8003 13.4502 10.6432 13.2931 10.6432 13.0994C10.6432 12.9056 10.8003 12.7485 10.9941 12.7485C11.1879 12.7485 11.345 12.9056 11.345 13.0994ZM12.0467 13.4502C12.2405 13.4502 12.3976 13.2931 12.3976 13.0994C12.3976 12.9056 12.2405 12.7485 12.0467 12.7485C11.853 12.7485 11.6959 12.9056 11.6959 13.0994C11.6959 13.2931 11.853 13.4502 12.0467 13.4502ZM13.4502 13.0994C13.4502 13.2931 13.2932 13.4502 13.0994 13.4502C12.9056 13.4502 12.7485 13.2931 12.7485 13.0994C12.7485 12.9056 12.9056 12.7485 13.0994 12.7485C13.2932 12.7485 13.4502 12.9056 13.4502 13.0994Z" fill="white"/>
-</g>
-<defs>
-<filter id="filter0_d_3502_444" x="9.59061" y="11.9298" width="21.4035" height="16.8422" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="0.350877" dy="0.467836"/>
-<feGaussianBlur stdDeviation="0.175439"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3502_444"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3502_444" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear_3502_444" x1="15.9649" y1="15.7895" x2="64.6784" y2="88.7134" gradientUnits="userSpaceOnUse">
-<stop stop-color="#8176FF"/>
-<stop offset="1" stop-color="#41BBFF"/>
-</linearGradient>
-<linearGradient id="paint1_linear_3502_444" x1="-2.80164" y1="-2.27633" x2="37.2385" y2="61.1108" gradientUnits="userSpaceOnUse">
-<stop offset="1" stop-color="#FFD55C"/>
-</linearGradient>
-<linearGradient id="paint2_linear_3502_444" x1="32.2489" y1="9.63823" x2="0.430205" y2="40.8603" gradientUnits="userSpaceOnUse">
-<stop stop-color="white" stop-opacity="0.16"/>
-<stop offset="0.53125" stop-color="white" stop-opacity="0"/>
-</linearGradient>
-</defs>
+<svg width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="458" height="458" rx="110" fill="black"/>
+  <path d="M100.625 167.424C100.625 154.383 111.197 143.811 124.237 143.811H334.388C347.428 143.811 358 154.383 358 167.424V188.675H100.625V167.424Z" fill="#5BCC5A"/>
+  <path d="M100.625 192.217H358V322.085C358 335.126 347.428 345.697 334.388 345.697H124.237C111.197 345.697 100.625 335.126 100.625 322.085V192.217Z" fill="#5BCC5A"/>
+  <path d="M269.454 124.921C269.454 118.401 274.739 113.115 281.26 113.115H304.872C311.393 113.115 316.678 118.401 316.678 124.921V268.662L293.066 296.111L269.454 268.662V124.921Z" fill="#0DA84C"/>
+  <path d="M269.454 124.921C269.454 118.401 274.739 113.115 281.26 113.115H304.872C311.393 113.115 316.678 118.401 316.678 124.921V192.217H269.454V124.921Z" fill="#75DC66"/>
 </svg>
