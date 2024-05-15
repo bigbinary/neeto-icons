@@ -4,10 +4,11 @@ The neetoIcons and neetoIconsRN library are a collection of SVG React component 
 the experience in the neeto products built at BigBinary.
 
 ## Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [How it works](#how-it-works)
-  - [Instructions for publishing](#instructions-for-publishing)
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [How it works](#how-it-works)
+- [Instructions for publishing](#instructions-for-publishing)
 
 ## Installation
 
@@ -56,7 +57,7 @@ import { Neeto } from "@bigbinary/neeto-icons/logos";
 ### App icons
 
 ```javascript
-import { NeetoSocial } from "@bigbinary/neeto-icons/app-icons";
+import { NeetoSite } from "@bigbinary/neeto-icons/app-icons";
 ```
 
 ### Misc icons

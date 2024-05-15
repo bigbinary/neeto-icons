@@ -2,7 +2,6 @@ import React from "react: React.FC<LogoProps>;
 
 type LogoProps = { width?: string | number, height?: string | number } & React.SVGProps<SVGSVGElement>;
 
-export const NeetoEngage: React.FC<LogoProps>;
 export const Neeto: React.FC<LogoProps>;
 export const NeetoAnalytics: React.FC<LogoProps>;
 export const NeetoAuth: React.FC<LogoProps>;
@@ -22,15 +21,10 @@ export const NeetoInvoice: React.FC<LogoProps>;
 export const NeetoKb: React.FC<LogoProps>;
 export const NeetoMonitor: React.FC<LogoProps>;
 export const NeetoPlanner: React.FC<LogoProps>;
-export const NeetoPopups: React.FC<LogoProps>;
 export const NeetoQuiz: React.FC<LogoProps>;
 export const NeetoReplay: React.FC<LogoProps>;
-export const NeetoReview: React.FC<LogoProps>;
 export const NeetoRunner: React.FC<LogoProps>;
-export const NeetoSign: React.FC<LogoProps>;
 export const NeetoSite: React.FC<LogoProps>;
-export const NeetoSocial: React.FC<LogoProps>;
-export const NeetoStore: React.FC<LogoProps>;
 export const NeetoTestify: React.FC<LogoProps>;
 export const NeetoWheel: React.FC<LogoProps>;
 export const NeetoWireframe: React.FC<LogoProps>;
