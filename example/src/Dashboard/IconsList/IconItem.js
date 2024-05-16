@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useRef } from "react";
 import classNames from "classnames";
 
-const IconItem = ({ name, Icon, onSelect, isSelected }, ref) => {
+const IconItem = ({ name, Icon, onSelect, isSelected, size = 36 }, ref) => {
   return (
     <div
       ref={ref}
@@ -13,7 +13,7 @@ const IconItem = ({ name, Icon, onSelect, isSelected }, ref) => {
         }
       )}
     >
-      <Icon size={24} color="#68737D" />
+      <Icon {...{ size }} color="#68737D" />
       <div className="mt-3 text-xs text-gray-700">{name}</div>
     </div>
   );

@@ -1,7 +1,7 @@
-const typefaceLogoTemplate = ( { componentName, jsx }, { tpl }, ) => tpl`
+const typefaceLogoTemplate = ({ componentName, jsx }, { tpl }) => tpl`
 import React from "react";
 
-export const ${componentName} = ({width="100%", height=20, ...props}) => {
+export const ${componentName} = ({width="100%", height=36, ...props}) => {
   return ${jsx};
 }
 `;
