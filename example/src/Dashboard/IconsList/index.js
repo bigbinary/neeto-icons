@@ -13,6 +13,7 @@ export default function IconsList({
   className = DEFAULT_CLASS_NAME,
   onIconSelect,
   selectedIcon,
+  size,
 }) {
   const ref = useRef();
   const onSelect = (name) => {
@@ -27,7 +28,7 @@ export default function IconsList({
         fontSize: 14,
       },
     });
-    onIconSelect(`${listName}-${name}`)
+    onIconSelect(`${listName}-${name}`);
   };
 
   useEffect(() => {
@@ -54,6 +55,7 @@ export default function IconsList({
             name={key}
             onSelect={onSelect}
             isSelected={isSelected}
+            size={size}
           />
         );
       })}

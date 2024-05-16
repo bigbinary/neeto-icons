@@ -1,38 +1,8 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 10.7731C0 4.82328 4.82328 0 10.7731 0H29.2269C35.1767 0 40 4.82328 40 10.7731V29.2269C40 35.1767 35.1767 40 29.2269 40H10.7731C4.82328 40 0 35.1767 0 29.2269V10.7731Z" fill="url(#paint0_linear_3502_436)"/>
-<mask id="mask0_3502_436" style="maskType:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
-<rect width="40" height="40" rx="10.7731" fill="url(#paint1_linear_3502_436)"/>
-</mask>
-<g mask="url(#mask0_3502_436)">
-<path d="M37.4194 22.3656C37.4194 12.1513 29.1391 3.87097 18.9248 3.87097H0.430176V40.8602H37.4194V22.3656Z" fill="url(#paint2_linear_3502_436)"/>
-</g>
-<g filter="url(#filter0_d_3502_436)">
-<rect x="24.5224" y="13.3334" width="2.02728" height="13.1383" rx="1.01364" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M27.6024 21.7469C27.7461 21.8021 27.9022 21.8323 28.0653 21.8323C28.7785 21.8323 29.3567 21.2541 29.3567 20.5409V19.6539C29.3567 18.9407 28.7785 18.3625 28.0653 18.3625C27.9022 18.3625 27.7461 18.3928 27.6024 18.448V21.7469Z" fill="white"/>
-<path d="M13.6121 21.7973C13.5828 21.555 13.6241 21.3093 13.7309 21.0898V21.0898C14.3201 19.8796 16.1404 20.2991 16.1404 21.6452V27.2562C16.1404 27.7704 15.7235 28.1872 15.2094 28.1872V28.1872C14.7384 28.1872 14.3416 27.8354 14.2851 27.3679L13.6121 21.7973Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11.2612 17.1983C10.901 17.2747 10.6433 17.5927 10.6433 17.961V22.1425C10.6433 22.5167 10.9091 22.8382 11.2767 22.9084L16.1404 23.8374V16.1635L11.2612 17.1983ZM17.193 15.9403V24.0385L24.5223 25.4384V14.3859L17.193 15.9403Z" fill="white"/>
-</g>
-<defs>
-<filter id="filter0_d_3502_436" x="10.6433" y="13.3334" width="19.4152" height="15.6725" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="0.350877" dy="0.467836"/>
-<feGaussianBlur stdDeviation="0.175439"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3502_436"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3502_436" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear_3502_436" x1="-2.82529" y1="-3.81944" x2="44.0936" y2="45.2632" gradientUnits="userSpaceOnUse">
-<stop offset="0.159672" stop-color="#FF8787"/>
-<stop offset="0.78967" stop-color="#FFA768"/>
-</linearGradient>
-<linearGradient id="paint1_linear_3502_436" x1="-2.80164" y1="-2.27633" x2="37.2385" y2="61.1108" gradientUnits="userSpaceOnUse">
-<stop offset="1" stop-color="#FFD55C"/>
-</linearGradient>
-<linearGradient id="paint2_linear_3502_436" x1="32.2489" y1="9.63811" x2="0.430175" y2="40.8602" gradientUnits="userSpaceOnUse">
-<stop stop-color="white" stop-opacity="0.16"/>
-<stop offset="0.53125" stop-color="white" stop-opacity="0"/>
-</linearGradient>
-</defs>
+<svg width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="458" height="458" rx="110" fill="black"/>
+  <path d="M255.615 298.619C255.615 331.414 229.029 358 196.234 358C163.438 358 136.853 331.414 136.853 298.619C136.853 265.824 163.438 239.238 196.234 239.238C229.029 239.238 255.615 265.824 255.615 298.619Z" fill="#75DC66"/>
+  <path d="M102 224.395C102 187.679 131.764 157.914 168.481 157.914H205.271V290.876H168.481C131.764 290.876 102 261.111 102 224.395Z" fill="#5BCC5A"/>
+  <path d="M205.27 157.912L338.322 101.052C346.839 97.4128 356.304 103.661 356.304 112.923V335.863C356.304 345.125 346.839 351.373 338.322 347.734L205.27 290.874V157.912Z" fill="#5BCC5A"/>
+  <path d="M205.271 239.92L205.27 290.874L168.481 290.876C157.777 290.876 147.663 288.345 138.705 283.85C145.27 258.2 168.538 239.237 196.235 239.237C199.307 239.237 202.325 239.47 205.271 239.92Z" fill="#0DA84C"/>
+  <path d="M254.156 311.763L205.27 290.874L205.271 239.92C233.777 244.273 255.615 268.896 255.615 298.619C255.615 303.136 255.111 307.535 254.156 311.763Z" fill="#0DA84C"/>
 </svg>

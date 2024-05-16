@@ -29,7 +29,7 @@ function Dashboard() {
       <Toaster position="bottom-center" />
       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <h2 className="px-8 pt-4">Icons</h2>
-      <IconsList icons={icons} listName="icons" {...commonProps} />
+      <IconsList size={24} icons={icons} listName="icons" {...commonProps} />
       <h2 className="px-8 pt-4">Logos</h2>
       <IconsList icons={logos} listName="logos" {...commonProps} />
       <h2 className="px-8 pt-4">App Icons</h2>

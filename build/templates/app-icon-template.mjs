@@ -1,7 +1,7 @@
 const appIconTemplate = ({ componentName, jsx }, { tpl }) => tpl`
 import React from 'react';
 
-export const ${componentName} = ({size=24, ...props}) => {
+export const ${componentName} = ({size=36, ...props}) => {
   return ${jsx};
 }
 `;

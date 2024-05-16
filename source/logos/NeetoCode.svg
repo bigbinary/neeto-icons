@@ -1,22 +1,6 @@
-<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M140 70C140 31.3401 108.66 0 70 0H0V140H140V70Z" fill="url(#paint0_linear_5716_1822)"/>
-<g filter="url(#filter0_d_5716_1822)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M103 70C103 51.7746 88.2254 37 70 37H37V103H103V70ZM71.7122 55.08L49.0804 71.0645L55.5939 77.5777L71.7122 66.1936V55.08ZM59.4909 81.4737L55.5949 77.5777L59.4909 74.8263V81.4737ZM84.6045 68.0334L80.7086 64.1374V70.7849L84.6045 68.0334ZM91.119 74.5466L68.4873 90.5311V79.4176L84.6055 68.0334L91.119 74.5466Z" fill="white"/>
-</g>
-<defs>
-<filter id="filter0_d_5716_1822" x="37" y="37" width="68.64" height="69.08" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="1.32" dy="1.76"/>
-<feGaussianBlur stdDeviation="0.66"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5716_1822"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5716_1822" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear_5716_1822" x1="-15" y1="-38.5" x2="202.5" y2="248" gradientUnits="userSpaceOnUse">
-<stop offset="0.373525" stop-color="#8176FF"/>
-<stop offset="1" stop-color="#41BBFF"/>
-</linearGradient>
-</defs>
+<svg width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="458" height="458" rx="110" fill="black"/>
+  <path d="M228.718 105.6L125.906 172.065V285.912L320.531 169.748C326.167 166.385 326.17 158.223 320.536 154.855L237.878 105.44C235.043 103.745 231.492 103.807 228.718 105.6Z" fill="#5BCC5A"/>
+  <path d="M228.718 352.372L125.906 285.908V172.061L320.531 288.224C326.167 291.588 326.17 299.75 320.536 303.118L237.878 352.533C235.043 354.228 231.492 354.165 228.718 352.372Z" fill="#75DC66"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M221.269 228.984L125.906 172.066V285.902L221.269 228.984Z" fill="#0DA84C"/>
 </svg>
