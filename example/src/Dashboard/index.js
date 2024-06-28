@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import IconsList from "./IconsList";
 import { Toaster } from "react-hot-toast";
@@ -14,6 +14,8 @@ function Dashboard() {
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedIcon = searchParams.get("selectedIcon");
 
+  const searchInputRef = useRef(null);
+
   const onIconSelect = (selectedIconName) => {
     setSearchParams({ selectedIcon: selectedIconName });
   };
@@ -24,10 +26,27 @@ function Dashboard() {
     selectedIcon,
   };
 
+  useEffect(() => {
+    const handleFocusSearchTerm = (event) => {
+      if (event.key === "/") {
+        event.preventDefault();
+
+        document.activeElement === searchInputRef.current
+          ? searchInputRef.current.blur()
+          : searchInputRef.current.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleFocusSearchTerm);
+    return () => {
+      document.removeEventListener("keydown", handleFocusSearchTerm);
+    };
+  }, []);
+
   return (
     <>
       <Toaster position="bottom-center" />
-      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <Header {...{ searchTerm, setSearchTerm, searchInputRef }} />
       <h2 className="px-8 pt-4">Icons</h2>
       <IconsList size={24} icons={icons} listName="icons" {...commonProps} />
       <h2 className="px-8 pt-4">Logos</h2>
