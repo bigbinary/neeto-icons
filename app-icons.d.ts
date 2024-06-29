@@ -19,6 +19,7 @@ export const NeetoInvoice: React.FC<LogoProps>;
 export const NeetoKb: React.FC<LogoProps>;
 export const NeetoPlanner: React.FC<LogoProps>;
 export const NeetoPlaydash: React.FC<LogoProps>;
+export const NeetoPublish: React.FC<LogoProps>;
 export const NeetoQuiz: React.FC<LogoProps>;
 export const NeetoRecord: React.FC<LogoProps>;
 export const NeetoReplay: React.FC<LogoProps>;

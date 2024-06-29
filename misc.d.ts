@@ -14,6 +14,7 @@ export const GoogleMeet: React.FC<MiscProps>;
 export const Instagram: React.FC<MiscProps>;
 export const Linear: React.FC<MiscProps>;
 export const Microsoft: React.FC<MiscProps>;
+export const Outlook: React.FC<MiscProps>;
 export const Safari: React.FC<MiscProps>;
 export const Shopify: React.FC<MiscProps>;
 export const Slack: React.FC<MiscProps>;
