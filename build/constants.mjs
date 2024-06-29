@@ -21,7 +21,13 @@ const commonProps = {
   },
 }
 
-const componentGenerationConfig = [
+const ICON_TYPE ="type IconProps = {\r\n\tsize?: string | number;\r\n\tstrokeWidth?: string | number;\r\n\tcolor?: string;\r\n} & React.SVGProps<SVGSVGElement>;\r\n"
+const TYPEFACE_ICON_TYPE = "type IconProps = { width?: string | number, height?: string | number } & React.SVGProps<SVGSVGElement>;\r\n";
+const OTHER_ICON_TYPE = "type IconProps = { size?: string | number } & React.SVGProps<SVGSVGElement>;\r\n";
+
+export const ENCODING_STANDARD = "utf-8";
+
+export const COMPONENT_GENERATION_CONFIG = [
   {
     options: {
       icon: true,
@@ -44,6 +50,7 @@ const componentGenerationConfig = [
     }},
     destination: "./generate/icons",
     source: "./source/icons/**.svg",
+    iconType: ICON_TYPE,
   },
   {
     options: {
@@ -55,6 +62,7 @@ const componentGenerationConfig = [
     },
     destination: "./generate/logos",
     source: "./source/logos/**.svg",
+    iconType: OTHER_ICON_TYPE,
   },
   {
     options: {
@@ -66,6 +74,7 @@ const componentGenerationConfig = [
     },
     destination: "./generate/app-icons",
     source: "./source/appIcons/**.svg",
+    iconType: OTHER_ICON_TYPE,
   },
   {
     options: {
@@ -77,6 +86,7 @@ const componentGenerationConfig = [
     },
     destination: "./generate/typeface-logos",
     source: "./source/typefaceLogos/**.svg",
+    iconType: TYPEFACE_ICON_TYPE,
   },
   {
     options: {
@@ -87,7 +97,6 @@ const componentGenerationConfig = [
     },
     destination: "./generate/misc",
     source: "./source/misc/**.svg",
+    iconType: OTHER_ICON_TYPE,
   },
 ];
-
-export default componentGenerationConfig;

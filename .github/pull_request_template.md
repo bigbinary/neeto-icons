@@ -5,7 +5,6 @@
 **Checklist**
 
 - [ ] I have made corresponding changes to the documentation.
-- [ ] I have updated the types definition of modified exports.
 - [ ] I have verified the functionality in some of the neeto web-apps.
 - [ ] I have added the necessary label (patch/minor/major - If package publish
       is required).

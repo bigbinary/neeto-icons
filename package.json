@@ -3,57 +3,57 @@
   "version": "1.18.10",
   "author": "vinay0x",
   "license": "MIT",
-  "types": "./icons.d.ts",
+  "types": "./dist/icons.d.ts",
   "exports": {
     "./typeface-logos": {
       "import": "./dist/typeface-logos/index.js",
       "require": "./dist/cjs/typeface-logos/index.cjs.js",
-      "types": "./typeface-logos.d.ts"
+      "types": "./dist/typeface-logos.d.ts"
     },
     "./typeface-logos/*": {
       "import": "./dist/typeface-logos/*.js",
       "require": "./dist/cjs/typeface-logos/*.cjs.js",
-      "types": "./typeface-logos.d.ts"
+      "types": "./dist/typeface-logos.d.ts"
     },
     "./app-icons": {
       "import": "./dist/app-icons/index.js",
       "require": "./dist/cjs/app-icons/index.cjs.js",
-      "types": "./app-icons.d.ts"
+      "types": "./dist/app-icons.d.ts"
     },
     "./app-icons/*": {
       "import": "./dist/app-icons/*.js",
       "require": "./dist/cjs/app-icons/*.cjs.js",
-      "types": "./app-icons.d.ts"
+      "types": "./dist/app-icons.d.ts"
     },
     "./logos": {
       "import": "./dist/neeto-logos/index.js",
       "require": "./dist/cjs/neeto-logos/index.cjs.js",
-      "types": "./logos.d.ts"
+      "types": "./dist/logos.d.ts"
     },
     "./logos/*": {
       "import": "./dist/neeto-logos/*.js",
       "require": "./dist/cjs/neeto-logos/*.cjs.js",
-      "types": "./logos.d.ts"
+      "types": "./dist/logos.d.ts"
     },
     "./misc": {
       "import": "./dist/misc/index.js",
       "require": "./dist/cjs/misc/index.cjs.js",
-      "types": "./misc.d.ts"
+      "types": "./dist/misc.d.ts"
     },
     "./misc/*": {
       "import": "./dist/misc/*.js",
       "require": "./dist/cjs/misc/*.cjs.js",
-      "types": "./misc.d.ts"
+      "types": "./dist/misc.d.ts"
     },
     ".": {
       "import": "./dist/icons/index.js",
       "require": "./dist/cjs/icons/index.cjs.js",
-      "types": "./icons.d.ts"
+      "types": "./dist/icons.d.ts"
     },
     "./*": {
       "import": "./dist/icons/*.js",
       "require": "./dist/cjs/icons/*.cjs.js",
-      "types": "./icons.d.ts"
+      "types": "./dist/icons.d.ts"
     }
   },
   "scripts": {
@@ -65,10 +65,7 @@
     "build:cjs": "BABEL_MODE=commonjs babel  --extensions \".js,.jsx\" generate --out-dir=dist/cjs",
     "build": "yarn build:pre && yarn generate && yarn build:es && yarn build:cjs"
   },
-  "files": [
-    "dist",
-    "*.d.ts"
-  ],
+  "files": ["dist"],
   "engines": {
     "node": ">=18.12",
     "npm": ">=9",
