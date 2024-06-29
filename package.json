@@ -1,38 +1,69 @@
 {
   "name": "@bigbinary/neeto-icons",
   "version": "1.18.10",
-  "main": "./dist/neeto-icons.cjs.js",
-  "module": "./dist/neeto-icons.js",
   "author": "vinay0x",
   "license": "MIT",
-  "types": "./index.d.ts",
+  "types": "./icons.d.ts",
   "exports": {
     "./typeface-logos": {
-      "import": "./dist/typeface-logos.js",
-      "require": "./dist/typeface-logos.cjs.js"
+      "import": "./dist/typeface-logos/index.js",
+      "require": "./dist/cjs/typeface-logos/index.cjs.js",
+      "types": "./typeface-logos.d.ts"
+    },
+    "./typeface-logos/*": {
+      "import": "./dist/typeface-logos/*.js",
+      "require": "./dist/cjs/typeface-logos/*.cjs.js",
+      "types": "./typeface-logos.d.ts"
     },
     "./app-icons": {
-      "import": "./dist/app-icons.js",
-      "require": "./dist/app-icons.cjs.js"
+      "import": "./dist/app-icons/index.js",
+      "require": "./dist/cjs/app-icons/index.cjs.js",
+      "types": "./app-icons.d.ts"
+    },
+    "./app-icons/*": {
+      "import": "./dist/app-icons/*.js",
+      "require": "./dist/cjs/app-icons/*.cjs.js",
+      "types": "./app-icons.d.ts"
     },
     "./logos": {
-      "import": "./dist/neeto-logos.js",
-      "require": "./dist/neeto-logos.cjs.js"
+      "import": "./dist/neeto-logos/index.js",
+      "require": "./dist/cjs/neeto-logos/index.cjs.js",
+      "types": "./logos.d.ts"
+    },
+    "./logos/*": {
+      "import": "./dist/neeto-logos/*.js",
+      "require": "./dist/cjs/neeto-logos/*.cjs.js",
+      "types": "./logos.d.ts"
     },
     "./misc": {
-      "import": "./dist/misc.js",
-      "require": "./dist/misc.cjs.js"
+      "import": "./dist/misc/index.js",
+      "require": "./dist/cjs/misc/index.cjs.js",
+      "types": "./misc.d.ts"
+    },
+    "./misc/*": {
+      "import": "./dist/misc/*.js",
+      "require": "./dist/cjs/misc/*.cjs.js",
+      "types": "./misc.d.ts"
     },
     ".": {
-      "import": "./dist/neeto-icons.js",
-      "require": "./dist/neeto-icons.cjs.js"
+      "import": "./dist/icons/index.js",
+      "require": "./dist/cjs/icons/index.cjs.js",
+      "types": "./icons.d.ts"
+    },
+    "./*": {
+      "import": "./dist/icons/*.js",
+      "require": "./dist/cjs/icons/*.cjs.js",
+      "types": "./icons.d.ts"
     }
   },
   "scripts": {
-    "prebuild": "rimraf generate && rimraf dist",
+    "generate": "node build/index.mjs",
     "start": "yarn build && NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.cjs",
     "build-preview": "NODE_ENV=production webpack serve --open --mode production --config webpack.dev.config.cjs --port 3000",
-    "build": "NODE_ENV=production rollup -c"
+    "build:pre": "rimraf generate && rimraf dist",
+    "build:es": "babel  --extensions \".js,.jsx\" generate --out-dir=dist",
+    "build:cjs": "BABEL_MODE=commonjs babel  --extensions \".js,.jsx\" generate --out-dir=dist/cjs",
+    "build": "yarn build:pre && yarn generate && yarn build:es && yarn build:cjs"
   },
   "files": [
     "dist",
@@ -44,12 +75,11 @@
     "yarn": ">=1.22"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.7",
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
     "@bigbinary/neeto-commons-frontend": "^3.0.16",
-    "@rollup/plugin-commonjs": "21.0.1",
-    "@rollup/plugin-node-resolve": "13.1.2",
     "@svgr/core": "^7.0.0",
     "@svgr/plugin-jsx": "^7.0.0",
     "@svgr/plugin-prettier": "^7.0.0",
@@ -71,16 +101,14 @@
     "react-hot-toast": "^2.1.1",
     "react-router-dom": "^6.20.1",
     "rimraf": "^5.0.0",
-    "rollup": "2.62.0",
-    "rollup-plugin-analyzer": "4.0.0",
-    "rollup-plugin-babel": "4.4.0",
-    "rollup-plugin-copy": "^3.5.0",
-    "rollup-plugin-license": "2.6.1",
     "style-loader": "^3.3.1",
     "uppercamelcase": "^3.0.0",
     "webpack": "^5.64.1",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.5.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   },
   "repository": "https://github.com/bigbinary/neeto-icons.git",
   "homepage": "https://neeto-icons.neeto.com",
