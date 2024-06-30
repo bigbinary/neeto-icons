@@ -16,11 +16,8 @@ const generateComponents = () => {
     fs.rmSync("dist", { recursive: true, force: true });
     fs.rmSync("generate", { recursive: true, force: true });
   } catch (err) {
-    if (err.code !== "ENOENT") console.log(err)
+    if (err.code !== "ENOENT") console.log(err);
   }
-
-  // make the dist folder
-  mkdirp.sync("dist");
 
   COMPONENT_GENERATION_CONFIG.forEach(
     ({
@@ -32,10 +29,7 @@ const generateComponents = () => {
     }) => {
       try {
         const indexFilePath = path.join(destination, "index.js");
-        const typeFilePath = path.join(
-          "dist",
-          `${destination.split("/").at(-1)}.d.ts`
-        );
+        const typeFilePath = `${destination.split("/").at(-1)}.d.ts`;
         const directory = path.parse(indexFilePath).dir;
 
         // make the directory
