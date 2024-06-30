@@ -57,13 +57,12 @@
     }
   },
   "scripts": {
-    "generate": "node build/index.mjs",
     "start": "yarn build && NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.cjs",
     "build-preview": "NODE_ENV=production webpack serve --open --mode production --config webpack.dev.config.cjs --port 3000",
-    "build:pre": "rimraf generate && rimraf dist",
+    "build:pre": "node build/index.mjs",
     "build:es": "babel  --extensions \".js,.jsx\" generate --out-dir=dist",
     "build:cjs": "BABEL_MODE=commonjs babel  --extensions \".js,.jsx\" generate --out-dir=dist/cjs",
-    "build": "yarn build:pre && yarn generate && yarn build:es && yarn build:cjs"
+    "build": "yarn build:pre && yarn build:es && yarn build:cjs"
   },
   "files": ["dist"],
   "engines": {
@@ -97,7 +96,6 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.1.1",
     "react-router-dom": "^6.20.1",
-    "rimraf": "^5.0.0",
     "style-loader": "^3.3.1",
     "uppercamelcase": "^3.0.0",
     "webpack": "^5.64.1",

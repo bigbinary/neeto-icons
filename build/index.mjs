@@ -5,9 +5,20 @@ import path from "path";
 import mkdirp from "mkdirp";
 import { transform } from "@svgr/core";
 import * as cheerio from "cheerio";
-import { COMPONENT_GENERATION_CONFIG, ENCODING_STANDARD } from "./constants.mjs";
+import {
+  COMPONENT_GENERATION_CONFIG,
+  ENCODING_STANDARD,
+} from "./constants.mjs";
 
 const generateComponents = () => {
+  // delete the dist and generate folders
+  try {
+    fs.rmSync("dist", { recursive: true, force: true });
+    fs.rmSync("generate", { recursive: true, force: true });
+  } catch (err) {
+    if (err.code !== "ENOENT") console.log(err)
+  }
+
   // make the dist folder
   mkdirp.sync("dist");
 
@@ -21,7 +32,10 @@ const generateComponents = () => {
     }) => {
       try {
         const indexFilePath = path.join(destination, "index.js");
-        const typeFilePath = path.join("dist", `${destination.split("/").at(-1)}.d.ts`);
+        const typeFilePath = path.join(
+          "dist",
+          `${destination.split("/").at(-1)}.d.ts`
+        );
         const directory = path.parse(indexFilePath).dir;
 
         // make the directory
@@ -31,7 +45,11 @@ const generateComponents = () => {
         fs.writeFileSync(indexFilePath, "", ENCODING_STANDARD);
 
         // make the type file
-        fs.writeFileSync(typeFilePath, `import React from "react";\n\n${iconType}\r\n`, ENCODING_STANDARD);
+        fs.writeFileSync(
+          typeFilePath,
+          `import React from "react";\n\n${iconType}\r\n`,
+          ENCODING_STANDARD
+        );
 
         // make the icon folder
         mkdirp.sync(destination);
@@ -57,7 +75,7 @@ const generateComponents = () => {
             const iconName = path.basename(iconPath, path.extname(iconPath));
             const componentName = uppercamelcase(iconName);
             const importStatement = `import ${componentName} from "./${componentName}";\r\n`;
-            const typeDefinition = `export const ${componentName}: React.FC<IconProps>;\r\n`
+            const typeDefinition = `export const ${componentName}: React.FC<IconProps>;\r\n`;
             const iconDestination = path.join(
               destination,
               componentName + ".js"
@@ -84,9 +102,17 @@ const generateComponents = () => {
             );
 
             // write component to file
-            fs.writeFileSync(iconDestination, reactComponent, ENCODING_STANDARD);
+            fs.writeFileSync(
+              iconDestination,
+              reactComponent,
+              ENCODING_STANDARD
+            );
             // append component import statement to the index file
-            fs.appendFileSync(indexFilePath, importStatement, ENCODING_STANDARD);
+            fs.appendFileSync(
+              indexFilePath,
+              importStatement,
+              ENCODING_STANDARD
+            );
             // append type definition
             fs.appendFileSync(typeFilePath, typeDefinition, ENCODING_STANDARD);
           });
