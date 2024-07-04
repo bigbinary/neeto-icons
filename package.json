@@ -26,13 +26,13 @@
       "types": "./app-icons.d.ts"
     },
     "./logos": {
-      "import": "./dist/neeto-logos/index.js",
-      "require": "./dist/cjs/neeto-logos/index.js",
+      "import": "./dist/logos/index.js",
+      "require": "./dist/cjs/logos/index.js",
       "types": "./logos.d.ts"
     },
     "./logos/*": {
-      "import": "./dist/neeto-logos/*.js",
-      "require": "./dist/cjs/neeto-logos/*.js",
+      "import": "./dist/logos/*.js",
+      "require": "./dist/cjs/logos/*.js",
       "types": "./logos.d.ts"
     },
     "./misc": {
