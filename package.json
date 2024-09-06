@@ -71,7 +71,7 @@
   "engines": {
     "node": ">=18.12",
     "npm": ">=9",
-    "yarn": ">=1.22"
+    "yarn": "1.22.x"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.7",
