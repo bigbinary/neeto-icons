@@ -28,6 +28,22 @@ yarn add @bigbinary/neeto-icons-rn
 
 Check the [Frontend package development guide](https://neeto-engineering.neetokb.com/p/a-d34cb4b0) for step-by-step instructions to develop the frontend package.
 
+#### Adding a new icon to the library
+
+1. **Add the SVG file -**
+   Place the SVG file for the new icon in the appropriate folder under the `source` directory. For example:
+   - `icons/` for normal icons
+   - `logos/` for product logos
+   - `typefaceLogos/` for product typeface logos
+   - `appIcons/` for app icons
+   - `misc/` for miscellaneous icons
+
+2. **Name the file appropriately -**
+   Use PascalCase for the file name (e.g., `NewIcon.svg`).
+
+3. **Verify the icon -**
+   Run the `yarn start` command to verify the React component for the new icon:
+
 ### Usage
 
 Web:
