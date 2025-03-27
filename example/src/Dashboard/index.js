@@ -7,6 +7,7 @@ import * as logos from "../../../generate/logos";
 import * as appIcons from "../../../generate/app-icons";
 import * as typefaceLogos from "../../../generate/typeface-logos";
 import * as miscIcons from "../../../generate/misc";
+import * as elements from "../../../generate/elements";
 import { useSearchParams } from "react-router-dom";
 
 function Dashboard() {
@@ -62,6 +63,8 @@ function Dashboard() {
       />
       <h2 className="px-8 pt-4">Misc Icons</h2>
       <IconsList icons={miscIcons} listName="miscIcons" {...commonProps} />
+      <h2 className="px-8 pt-4">Elements</h2>
+      <IconsList icons={elements} listName="elements" {...commonProps} />
     </>
   );
 }
