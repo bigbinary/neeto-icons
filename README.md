@@ -37,6 +37,7 @@ Check the [Frontend package development guide](https://neeto-engineering.neetokb
    - `typefaceLogos/` for product typeface logos
    - `appIcons/` for app icons
    - `misc/` for miscellaneous icons
+   - `elements/` for elements
 
 2. **Name the file appropriately -**
    Use PascalCase for the file name (e.g., `NewIcon.svg`).
@@ -107,6 +108,28 @@ Anywhere in your React file
 | height    | string, number | 20      | Value supplied to height attribute of SVG element. |
 | width     | string, number | 100%    | Value supplied to width attribute of SVG element.  |
 | className | string         |         | Classes supplied to the SVG element.               |
+
+
+
+### Elements
+
+```javascript
+import { Keyboard } from "@bigbinary/neeto-icons/elements";
+```
+
+Anywhere in your React file
+
+```jsx
+<Keyboard height={80} width={41} />
+```
+
+| Name      | Type           | Default | Description                                        |
+| :-------- | :------------- | :------ | :------------------------------------------------- |
+| height    | string, number | 26      | Value supplied to height attribute of SVG element. |
+| width     | string, number | 80      | Value supplied to width attribute of SVG element.  |
+| className | string         |         | Classes supplied to the SVG element.               |
+
+
 
 ## How it works
 
