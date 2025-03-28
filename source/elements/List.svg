@@ -1,7 +1,7 @@
 <svg width="80" height="26" viewBox="0 0 80 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="32.5" y="4.5" width="16" height="18" rx="1.5" stroke="#101828"/>
-<path d="M35 9H46" stroke="#101828"/>
-<path d="M35 12H46" stroke="#101828"/>
-<path d="M35 15H46" stroke="#101828"/>
-<path d="M35 18H46" stroke="#101828"/>
+<rect x="32.5" y="4.5" width="16" height="18" rx="1.5" stroke="#101828" data-dark-mode-color="true"/>
+<path d="M35 9H46" stroke="#101828" data-dark-mode-color="true"/>
+<path d="M35 12H46" stroke="#101828" data-dark-mode-color="true"/>
+<path d="M35 15H46" stroke="#101828" data-dark-mode-color="true"/>
+<path d="M35 18H46" stroke="#101828" data-dark-mode-color="true"/>
 </svg>
