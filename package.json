@@ -45,6 +45,16 @@
       "require": "./dist/cjs/misc/*.js",
       "types": "./misc.d.ts"
     },
+    "./elements": {
+      "import": "./dist/elements/index.js",
+      "require": "./dist/cjs/elements/index.js",
+      "types": "./elements.d.ts"
+    },
+    "./elements/*": {
+      "import": "./dist/elements/*.js",
+      "require": "./dist/cjs/elements/*.js",
+      "types": "./elements.d.ts"
+    },
     ".": {
       "import": "./dist/icons/index.js",
       "require": "./dist/cjs/icons/index.js",

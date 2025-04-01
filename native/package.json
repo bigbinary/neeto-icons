@@ -20,6 +20,9 @@
     "./misc": {
       "import": "./dist/misc"
     },
+    "./elements": {
+      "elements": "./dist/elements"
+    },
     ".": {
       "import": "./dist/icons"
     }
