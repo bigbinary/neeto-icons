@@ -95,11 +95,11 @@ export const COMPONENT_GENERATION_CONFIG = [
       icon: true,
       template: miscTemplate,
       plugins,
-      svgProps: { width: "{size}", height: "{size}" },
+      svgProps: { width: "{width}", height: "{height}" },
     },
     destination: "./generate/misc",
     source: "./source/misc/**.svg",
-    iconType: OTHER_ICON_TYPE,
+    iconType: TYPEFACE_ICON_TYPE,
   },
   {
     options: {
