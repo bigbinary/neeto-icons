@@ -77,12 +77,6 @@ import { Neeto } from "@bigbinary/neeto-icons/logos";
 import { NeetoSite } from "@bigbinary/neeto-icons/app-icons";
 ```
 
-### Misc icons
-
-```javascript
-import { Google } from "@bigbinary/neeto-icons/misc";
-```
-
 ### Props
 
 | Name      | Type           | Default      | Description                                                   |
@@ -90,6 +84,19 @@ import { Google } from "@bigbinary/neeto-icons/misc";
 | color     | string         | currentColor | CSS color value for the icon.                                 |
 | size      | string, number | 24           | Value supplied to height and width attributes of SVG element. |
 | className | string         |              | Classes supplied to the SVG element.                          |
+
+
+### Misc icons
+
+```javascript
+import { Razorpay } from "@bigbinary/neeto-icons/misc";
+```
+
+Anywhere in your React file
+
+```jsx
+<Razorpay  width={100}  height={25}/>
+```
 
 ### Typeface logos
 
