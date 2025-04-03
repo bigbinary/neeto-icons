@@ -1,7 +1,7 @@
 const miscTemplate = ( { componentName, jsx }, { tpl }, ) => tpl`
 import React from "react";
 
-const ${componentName} = ({width=32, height=32, ...props}) => {
+const ${componentName} = ({width=24, height=24, ...props}) => {
   return ${jsx};
 }
 
