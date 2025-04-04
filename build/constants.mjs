@@ -26,6 +26,7 @@ const ICON_TYPE ="type IconProps = {\r\n\tsize?: string | number;\r\n\tstrokeWid
 const TYPEFACE_ICON_TYPE = "type IconProps = { width?: string | number, height?: string | number } & React.SVGProps<SVGSVGElement>;\r\n";
 const OTHER_ICON_TYPE = "type IconProps = { size?: string | number } & React.SVGProps<SVGSVGElement>;\r\n";
 const ELEMENTS_ICON_TYPE = "type IconProps = { width?: string | number, height?: string | number } & React.SVGProps<SVGSVGElement>;\r\n";
+const MISC_ICON_TYPE = "type IconProps = { size?: string | number; width?: string | number, height?: string | number } & React.SVGProps<SVGSVGElement>;\r\n"
 
 export const ENCODING_STANDARD = "utf-8";
 
@@ -99,7 +100,7 @@ export const COMPONENT_GENERATION_CONFIG = [
     },
     destination: "./generate/misc",
     source: "./source/misc/**.svg",
-    iconType: TYPEFACE_ICON_TYPE,
+    iconType: MISC_ICON_TYPE,
   },
   {
     options: {
