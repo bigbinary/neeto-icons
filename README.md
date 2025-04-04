@@ -89,14 +89,25 @@ import { NeetoSite } from "@bigbinary/neeto-icons/app-icons";
 ### Misc icons
 
 ```javascript
+import { Windows } from "@bigbinary/neeto-icons/misc";
+<Windows  size={36} />
+```
+
+```javascript
 import { Razorpay } from "@bigbinary/neeto-icons/misc";
+<Razorpay  width={100}  height={24}/>
 ```
 
-Anywhere in your React file
 
-```jsx
-<Razorpay  width={100}  height={25}/>
-```
+### Props
+
+| Name      | Type           | Default      | Description                                                   |
+| :-------- | :------------- | :----------- | :------------------------------------------------------------ |
+| size      | string, number | 24           | Value supplied to height and width attributes of SVG element. |
+| height    | string, number | -            | Value supplied to height attribute of SVG element.            |
+| width     | string, number | -            | Value supplied to width attribute of SVG element.             |
+| className | string         |              | Classes supplied to the SVG element.                          |
+
 
 ### Typeface logos
 
