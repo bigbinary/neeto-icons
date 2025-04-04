@@ -95,7 +95,8 @@ import { Windows } from "@bigbinary/neeto-icons/misc";
 
 ```javascript
 import { Razorpay } from "@bigbinary/neeto-icons/misc";
-<Razorpay  width={100}  height={24}/>
+<Razorpay  width={100}  height={32} />
+<Razorpay  width={100}  />
 ```
 
 
