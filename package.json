@@ -4,6 +4,8 @@
   "author": "vinay0x",
   "license": "MIT",
   "types": "./icons.d.ts",
+  "module": "./dist/icons/index.js",
+  "main": "./dist/cjs/icons/index.js",
   "exports": {
     "./typeface-logos": {
       "import": "./dist/typeface-logos/index.js",
