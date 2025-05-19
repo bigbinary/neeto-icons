@@ -1,14 +1,11 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_8113_207)">
-<line x1="3" y1="3.25" x2="21.8571" y2="3.25" stroke="#68737D" stroke-width="1.5"/>
-<rect x="11.14" y="21.43" width="5.14" height="15.43" rx="1" transform="rotate(-180 11.14 21.43)" fill="#68737D"/>
-<mask id="path-3-inside-1_8113_207" fill="white">
-<rect x="13" y="6" width="5.14" height="12" rx="1"/>
-</mask>
-<rect x="13" y="6" width="5.14" height="12" rx="1" stroke="#68737D" stroke-width="3" mask="url(#path-3-inside-1_8113_207)"/>
+<g clip-path="url(#clip0_8118_395)">
+<rect x="11.1213" y="6.11267" width="15.43" height="5.14" rx="0.852941" transform="rotate(90 11.1213 6.11267)" fill="#68737D"/>
+<path d="M14.3317 7.61261L14.3317 16.6126L16.4713 16.6126L16.4713 7.61261L14.3317 7.61261ZM13.6842 18.1126L13.5973 18.1077C13.1958 18.067 12.8764 17.7484 12.8356 17.347L12.8317 17.2601L12.8317 6.96515L12.8356 6.87823C12.8764 6.47679 13.1958 6.15817 13.5973 6.11749L13.6842 6.11261L17.1188 6.11261C17.5602 6.11281 17.9227 6.44834 17.9664 6.87823L17.9713 6.96515L17.9713 17.2601L17.9664 17.347C17.9227 17.7769 17.5602 18.1124 17.1188 18.1126L13.6842 18.1126Z" fill="#68737D"/>
+<line x1="19.9713" y1="3.18109" x2="3.88728" y2="3.18109" stroke="#68737D" stroke-width="1.27941"/>
 </g>
 <defs>
-<clipPath id="clip0_8113_207">
+<clipPath id="clip0_8118_395">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
